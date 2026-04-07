@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+.venv
+venv/
+*.egg-info/
+dist/
+build/
+
+# Nuxt / Node
+frontend/node_modules/
+frontend/.nuxt/
+frontend/.output/
+frontend/.cache/
+
+# Next.js leftover build artifacts (no longer used)
+frontend/.next/
+
+# Data — keep structure but not generated files
+data/processed/
+data/synthetic/*.csv
+
+# OS
+.DS_Store
+Thumbs.db
