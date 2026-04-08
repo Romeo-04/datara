@@ -21,14 +21,20 @@
         <NuxtLink to="/" class="hover:text-[#f5a623] transition-colors">
           Dashboard
         </NuxtLink>
-        <NuxtLink
-          to="/divisions"
-          class="hover:text-[#f5a623] transition-colors"
-        >
+        <NuxtLink to="/map" class="hover:text-[#f5a623] transition-colors">
+          Map
+        </NuxtLink>
+        <NuxtLink to="/divisions" class="hover:text-[#f5a623] transition-colors">
           Divisions
         </NuxtLink>
         <NuxtLink to="/regions" class="hover:text-[#f5a623] transition-colors">
           Regions
+        </NuxtLink>
+        <NuxtLink
+          to="/upload"
+          class="bg-[#f5a623] text-[#1a4e8f] font-semibold px-3 py-0.5 rounded-lg hover:bg-yellow-400 transition-colors"
+        >
+          Upload Data
         </NuxtLink>
       </div>
     </nav>

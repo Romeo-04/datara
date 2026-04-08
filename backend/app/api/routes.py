@@ -57,6 +57,10 @@ def _parse_region(raw: dict) -> RegionSummary:
         avg_ltr=float(raw.get("avg_ltr", 0)),
         avg_geo_disadvantage=float(raw.get("avg_geo_disadvantage", 0)),
         avg_nat_combined_mps=float(raw.get("avg_nat_combined_mps", 50)),
+        avg_uai_score=float(raw["avg_uai_score"]) if raw.get("avg_uai_score") is not None else None,
+        max_uai_score=float(raw["max_uai_score"]) if raw.get("max_uai_score") is not None else None,
+        critical_divisions=int(raw["critical_divisions"]) if raw.get("critical_divisions") is not None else None,
+        high_divisions=int(raw["high_divisions"]) if raw.get("high_divisions") is not None else None,
     )
 
 
