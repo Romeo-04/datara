@@ -1,6 +1,5 @@
 """
 Pipeline Runner — executes all modules end-to-end and writes processed outputs.
-Run this script to regenerate the processed data used by the API.
 
 Usage (from project root):
     python -m backend.pipeline.run_pipeline
@@ -25,56 +24,85 @@ DATA_RAW = ROOT / "data" / "synthetic"
 DATA_OUT = ROOT / "data" / "processed"
 
 
-def run():
+def run(data_dir: str = None, silent: bool = False) -> dict:
+    """
+    Run the full pipeline end-to-end.
+
+    Args:
+        data_dir: Path to raw CSV files. Defaults to data/synthetic/.
+        silent:   Suppress print output (used when called from the API).
+
+    Returns:
+        dict with summary stats from the pipeline run.
+    """
     DATA_OUT.mkdir(parents=True, exist_ok=True)
+    raw_dir = Path(data_dir) if data_dir else DATA_RAW
 
-    print("=== STAR Pipeline Starting ===\n")
+    def log(msg):
+        if not silent:
+            print(msg)
 
-    print("[1/6] Ingesting and standardizing data...")
-    teachers, schools, logs, nat = load_all(str(DATA_RAW))
-    print(f"      {len(teachers)} teachers | {len(schools)} schools | {len(logs)} training logs | {len(nat)} NAT records")
+    log("=== STAR Pipeline Starting ===\n")
 
-    print("[2/6] Profiling teacher records...")
+    log("[1/6] Ingesting and standardizing data...")
+    teachers, schools, logs, nat = load_all(str(raw_dir))
+    log(f"      {len(teachers)} teachers | {len(schools)} schools | {len(logs)} training logs | {len(nat)} NAT records")
+
+    log("[2/6] Profiling teacher records...")
     profiled = profile_teachers(teachers)
     mismatch_pct = profiled["is_mismatched"].mean() * 100
     gap_pct = profiled["has_training_gap"].mean() * 100
-    print(f"      Overall mismatch rate: {mismatch_pct:.1f}% | Training gap rate: {gap_pct:.1f}%")
+    log(f"      Overall mismatch rate: {mismatch_pct:.1f}% | Training gap rate: {gap_pct:.1f}%")
 
-    print("[3/6] Aggregating to division level...")
+    log("[3/6] Aggregating to division level...")
     division_df = aggregate_by_division(profiled, schools, nat)
-    region_df = aggregate_by_region(division_df)
-    print(f"      {len(division_df)} divisions | {len(region_df)} regions")
+    log(f"      {len(division_df)} divisions")
 
-    print("[4/6] Computing Underserved Area Index...")
+    log("[4/6] Computing Underserved Area Index...")
     division_df = compute_uai(division_df)
+    # Re-aggregate regions AFTER UAI so avg_uai_score is included
+    region_df = aggregate_by_region(division_df)
+    log(f"      {len(region_df)} regions")
     top5 = division_df.nsmallest(5, "priority_rank")[["division", "region", "uai_score", "priority_tier"]]
-    print("      Top 5 most underserved divisions:")
-    print(top5.to_string(index=False))
+    log("      Top 5 most underserved divisions:")
+    log(top5.to_string(index=False))
 
-    print("[5/6] Generating intervention recommendations...")
+    log("[5/6] Generating intervention recommendations...")
     division_df = apply_recommendations(division_df)
     breakdown = division_df["intervention_label"].value_counts()
-    print("      Intervention breakdown:")
+    log("      Intervention breakdown:")
     for label, count in breakdown.items():
-        print(f"        {label}: {count} divisions")
+        log(f"        {label}: {count} divisions")
 
-    print("[6/6] Generating plain-language explanations...")
+    log("[6/6] Generating plain-language explanations...")
     division_df = apply_explanations(division_df)
 
-    _save(division_df, DATA_OUT / "division_intelligence.csv")
-    _save(region_df, DATA_OUT / "region_summary.csv")
-    _save_api_json(division_df, region_df, DATA_OUT)
+    _save(division_df, DATA_OUT / "division_intelligence.csv", silent)
+    _save(region_df, DATA_OUT / "region_summary.csv", silent)
+    _save_api_json(division_df, region_df, DATA_OUT, silent)
 
-    print(f"\n=== Pipeline Complete ===")
-    print(f"    Outputs written to: {DATA_OUT}")
+    log(f"\n=== Pipeline Complete ===")
+    log(f"    Outputs written to: {DATA_OUT}")
+
+    return {
+        "divisions": len(division_df),
+        "regions": len(region_df),
+        "teachers": int(profiled["teacher_id"].count()),
+        "schools": int(schools["school_id"].count()),
+        "mismatch_rate": round(mismatch_pct / 100, 4),
+        "training_gap_rate": round(gap_pct / 100, 4),
+        "critical_divisions": int((division_df["priority_tier"] == "Critical Priority").sum()),
+        "high_divisions": int((division_df["priority_tier"] == "High Priority").sum()),
+    }
 
 
-def _save(df: pd.DataFrame, path: Path):
+def _save(df: pd.DataFrame, path: Path, silent: bool = False):
     df.to_csv(path, index=False)
-    print(f"      Saved: {path.name} ({len(df)} rows)")
+    if not silent:
+        print(f"      Saved: {path.name} ({len(df)} rows)")
 
 
-def _save_api_json(division_df: pd.DataFrame, region_df: pd.DataFrame, out_dir: Path):
+def _save_api_json(division_df: pd.DataFrame, region_df: pd.DataFrame, out_dir: Path, silent: bool = False):
     div_cols = [
         "division", "region", "priority_rank", "priority_tier", "uai_score",
         "total_teachers", "total_schools",
@@ -90,7 +118,6 @@ def _save_api_json(division_df: pd.DataFrame, region_df: pd.DataFrame, out_dir: 
     available = [c for c in div_cols if c in division_df.columns]
     div_json = division_df[available].sort_values("priority_rank").copy()
 
-    # Convert any list columns to strings to keep JSON clean
     for col in div_json.columns:
         if div_json[col].dtype == object:
             div_json[col] = div_json[col].apply(
@@ -103,11 +130,13 @@ def _save_api_json(division_df: pd.DataFrame, region_df: pd.DataFrame, out_dir: 
         "region", "total_teachers", "total_schools", "n_divisions",
         "avg_mismatch_rate", "avg_training_gap_rate", "avg_novice_rate",
         "avg_ltr", "avg_geo_disadvantage", "avg_nat_gap_score", "avg_nat_combined_mps",
+        "avg_uai_score", "max_uai_score", "critical_divisions", "high_divisions",
     ]
     available_reg = [c for c in reg_cols if c in region_df.columns]
     region_df[available_reg].to_json(out_dir / "region_summary.json", orient="records", indent=2)
 
-    print(f"      Saved: division_intelligence.json + region_summary.json")
+    if not silent:
+        print(f"      Saved: division_intelligence.json + region_summary.json")
 
 
 if __name__ == "__main__":

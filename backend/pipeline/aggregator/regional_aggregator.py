@@ -67,9 +67,11 @@ def aggregate_by_division(
 
 def aggregate_by_region(division_df: pd.DataFrame) -> pd.DataFrame:
     """
-    Further rolls up division data to region level for top-level heatmap.
+    Further rolls up division data to region level.
+    If uai_score and priority_tier columns are present (post-UAI engine),
+    they are included in the aggregation for map and heatmap use.
     """
-    return division_df.groupby("region").agg(
+    base = division_df.groupby("region").agg(
         total_teachers=("total_teachers", "sum"),
         total_schools=("total_schools", "sum"),
         avg_mismatch_rate=("mismatch_rate", "mean"),
@@ -81,3 +83,15 @@ def aggregate_by_region(division_df: pd.DataFrame) -> pd.DataFrame:
         avg_nat_combined_mps=("nat_combined_mps", "mean"),
         n_divisions=("division", "count"),
     ).reset_index()
+
+    # Include UAI scores if available (called after uai_engine)
+    if "uai_score" in division_df.columns:
+        uai_agg = division_df.groupby("region").agg(
+            avg_uai_score=("uai_score", "mean"),
+            max_uai_score=("uai_score", "max"),
+            critical_divisions=("priority_tier", lambda x: (x == "Critical Priority").sum()),
+            high_divisions=("priority_tier", lambda x: (x == "High Priority").sum()),
+        ).reset_index()
+        base = base.merge(uai_agg, on="region", how="left")
+
+    return base

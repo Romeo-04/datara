@@ -45,6 +45,10 @@ export interface Region {
   avg_ltr: number;
   avg_geo_disadvantage: number;
   avg_nat_combined_mps: number;
+  avg_uai_score?: number;
+  max_uai_score?: number;
+  critical_divisions?: number;
+  high_divisions?: number;
 }
 
 export interface StatsOverview {

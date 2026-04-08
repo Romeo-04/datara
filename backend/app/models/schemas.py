@@ -51,6 +51,10 @@ class RegionSummary(BaseModel):
     avg_ltr: float
     avg_geo_disadvantage: float
     avg_nat_combined_mps: float
+    avg_uai_score: Optional[float] = None
+    max_uai_score: Optional[float] = None
+    critical_divisions: Optional[int] = None
+    high_divisions: Optional[int] = None
 
 
 class PaginatedDivisions(BaseModel):
