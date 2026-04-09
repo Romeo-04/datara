@@ -15,17 +15,38 @@ const REGION_CENTERS: Record<string, [number, number]> = {
   "Region II":   [17.6132, 121.7270],
   "Region III":  [15.4827, 120.7120],
   "Region IV-A": [14.1007, 121.0794],
-  "Region IV-B": [11.1784, 121.6063],
+  "Region IV-B": [10.5000, 119.5000],
   "Region V":    [13.4208, 123.4136],
-  "Region VI":   [11.0000, 122.5000],
-  "Region VII":  [10.3157, 123.8854],
-  "Region VIII": [11.2440, 124.9762],
-  "Region IX":   [8.1521,  123.2655],
-  "Region X":    [8.0022,  124.6484],
-  "Region XI":   [7.3041,  126.0893],
-  "Region XII":  [6.2969,  124.6859],
-  "Region XIII": [8.9456,  125.5438],
-  "BARMM":       [7.0083,  124.2421],
+  "Region VI":   [11.0000, 122.6000],
+  "Region VII":  [10.0000, 124.0000],
+  "Region VIII": [11.5000, 125.0000],
+  "Region IX":   [7.8000,  123.4000],
+  "Region X":    [8.1000,  124.8000],
+  "Region XI":   [7.1000,  125.8000],
+  "Region XII":  [6.5000,  124.8000],
+  "Region XIII": [8.9456,  125.9000],
+  "BARMM":       [6.9000,  124.2000],
+};
+
+// Real-world radii (meters) to approximate each region's land mass
+const REGION_RADII: Record<string, number> = {
+  "NCR":         22000,
+  "CAR":         95000,
+  "Region I":    85000,
+  "Region II":   110000,
+  "Region III":  90000,
+  "Region IV-A": 88000,
+  "Region IV-B": 150000,
+  "Region V":    105000,
+  "Region VI":   95000,
+  "Region VII":  80000,
+  "Region VIII": 115000,
+  "Region IX":   85000,
+  "Region X":    95000,
+  "Region XI":   85000,
+  "Region XII":  95000,
+  "Region XIII": 105000,
+  "BARMM":       130000,
 };
 
 function uaiToColor(uai: number): string {
@@ -41,41 +62,37 @@ function uaiToLabel(uai: number): string {
 }
 
 onMounted(async () => {
+  await nextTick();
   if (!mapEl.value) return;
 
-  const L = (await import("leaflet")).default;
-  await import("leaflet/dist/leaflet.css");
+  const [leafletModule] = await Promise.all([
+    import("leaflet"),
+    import("leaflet/dist/leaflet.css"),
+  ]);
+  const L = leafletModule.default;
 
-  const map = L.map(mapEl.value, { zoomControl: true }).setView([12.0, 122.5], 6);
+  const map = L.map(mapEl.value, { zoomControl: true }).setView([11.5, 122.5], 6);
 
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>',
-    maxZoom: 13,
+    maxZoom: 16,
   }).addTo(map);
 
-  // Region circles
+  setTimeout(() => map.invalidateSize(), 100);
+
+  // Region coverage circles — L.circle uses real-world meters so they scale with zoom
   props.regions.forEach((region: any) => {
     const center = REGION_CENTERS[region.region];
     if (!center) return;
 
     const uai = region.avg_uai_score ?? 0.3;
     const color = uaiToColor(uai);
-    const radius = Math.min(Math.max(18 + (region.total_teachers / 800) * 10, 16), 38);
-
-    const circle = L.circleMarker(center, {
-      radius,
-      fillColor: color,
-      color: "#fff",
-      weight: 2.5,
-      opacity: 1,
-      fillOpacity: 0.85,
-    }).addTo(map);
-
+    const radius = REGION_RADII[region.region] ?? 90000;
     const critical = region.critical_divisions ?? 0;
     const high = region.high_divisions ?? 0;
 
-    circle.bindPopup(`
-      <div style="min-width:200px;font-family:system-ui,sans-serif">
+    const popupHtml = `
+      <div style="min-width:210px;font-family:system-ui,sans-serif">
         <div style="font-weight:700;font-size:14px;margin-bottom:6px;color:#1a4e8f">${region.region}</div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;font-size:12px">
           <span style="color:#666">Avg UAI Score</span>
@@ -100,17 +117,41 @@ onMounted(async () => {
                   font-weight:600;text-decoration:none;border:1px solid #1a4e8f;border-radius:4px;padding:3px 0">
           View Region Detail →
         </a>
-      </div>`, { maxWidth: 240 }
-    );
+      </div>`;
+
+    // Large translucent fill — covers land mass
+    L.circle(center, {
+      radius,
+      fillColor: color,
+      color: color,
+      weight: 2,
+      opacity: 0.7,
+      fillOpacity: 0.22,
+      interactive: false,
+    }).addTo(map);
+
+    // Solid center dot for click/label — always visible
+    L.circleMarker(center, {
+      radius: 10,
+      fillColor: color,
+      color: "#fff",
+      weight: 2.5,
+      opacity: 1,
+      fillOpacity: 1,
+    })
+      .bindPopup(popupHtml, { maxWidth: 250 })
+      .addTo(map);
 
     // Region label
     L.marker(center, {
       icon: L.divIcon({
         className: "",
-        html: `<div style="font-size:9px;font-weight:700;color:white;text-align:center;
-                            text-shadow:0 1px 2px rgba(0,0,0,0.8);white-space:nowrap;
-                            pointer-events:none">${region.region}</div>`,
-        iconAnchor: [30, -14],
+        html: `<div style="font-size:9px;font-weight:800;color:#1a4e8f;text-align:center;
+                            background:rgba(255,255,255,0.75);padding:1px 4px;border-radius:3px;
+                            white-space:nowrap;pointer-events:none;margin-top:14px">
+                 ${region.region}
+               </div>`,
+        iconAnchor: [30, -2],
       }),
     }).addTo(map);
   });
@@ -122,19 +163,18 @@ onMounted(async () => {
     const regionCenter = REGION_CENTERS[div.region];
     if (!regionCenter) return;
 
-    // Deterministic jitter so dots spread around region center
     const hash = div.division.split("").reduce((a, c) => a + c.charCodeAt(0), 0);
     const lat = regionCenter[0] + ((hash % 17) - 8) * 0.12;
     const lng = regionCenter[1] + ((hash % 13) - 6) * 0.12;
     const color = uaiToColor(div.uai_score);
 
     L.circleMarker([lat, lng], {
-      radius: 6,
+      radius: 7,
       fillColor: color,
       color: "#fff",
-      weight: 1,
-      opacity: 0.9,
-      fillOpacity: 0.75,
+      weight: 1.5,
+      opacity: 1,
+      fillOpacity: 0.9,
     })
       .bindPopup(`
         <div style="font-family:system-ui,sans-serif;min-width:160px">
@@ -162,25 +202,25 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="relative w-full h-full">
-    <div ref="mapEl" class="w-full h-full rounded-xl z-0" />
+  <div class="relative" style="width:100%;height:calc(100vh - 56px)">
+    <div ref="mapEl" style="width:100%;height:100%" />
 
     <!-- Legend -->
     <div class="absolute bottom-8 left-4 z-[1000] bg-white border border-gray-200 rounded-xl shadow-md p-3 text-xs space-y-1.5">
       <div class="font-semibold text-gray-700 mb-2">UAI Priority Level</div>
       <div class="flex items-center gap-2">
-        <span class="w-4 h-4 rounded-full bg-red-500 inline-block border-2 border-white shadow" />
+        <span class="w-4 h-4 rounded-full bg-red-600 inline-block border-2 border-white shadow" />
         Critical Priority (≥ 0.65)
       </div>
       <div class="flex items-center gap-2">
-        <span class="w-4 h-4 rounded-full bg-amber-500 inline-block border-2 border-white shadow" />
+        <span class="w-4 h-4 rounded-full bg-orange-500 inline-block border-2 border-white shadow" />
         High Priority (0.40 – 0.65)
       </div>
       <div class="flex items-center gap-2">
         <span class="w-4 h-4 rounded-full bg-green-500 inline-block border-2 border-white shadow" />
         Standard Priority (&lt; 0.40)
       </div>
-      <div class="pt-1 border-t text-gray-400">Circle size = teacher count</div>
+      <div class="pt-1 border-t text-gray-400">Shaded area = region coverage</div>
       <div class="text-gray-400">Zoom in (level 8+) for division dots</div>
     </div>
   </div>

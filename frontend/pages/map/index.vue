@@ -3,7 +3,7 @@ const api = useApi();
 
 const [{ data: regions }, { data: divisions }] = await Promise.all([
   useAsyncData("map-regions", () => api.regions()),
-  useAsyncData("map-divisions", () => api.topDivisions(86)),
+  useAsyncData("map-divisions", () => api.topDivisions(50)),
 ]);
 
 const criticalDivisions = computed(() =>
@@ -28,19 +28,11 @@ const regionsSortedByUAI = computed(() =>
 
     <!-- Map -->
     <div class="flex-1 relative">
-      <ClientOnly>
-        <MapPhilippinesMap
-          v-if="regions && divisions"
-          :regions="regions"
-          :divisions="divisions"
-          class="w-full h-full"
-        />
-        <template #fallback>
-          <div class="w-full h-full flex items-center justify-center bg-gray-100 text-gray-400">
-            Loading map…
-          </div>
-        </template>
-      </ClientOnly>
+      <MapPhilippinesMap
+        v-if="regions && divisions"
+        :regions="regions"
+        :divisions="divisions"
+      />
 
       <!-- Title overlay -->
       <div class="absolute top-4 left-1/2 -translate-x-1/2 z-[1000] bg-white/90 backdrop-blur

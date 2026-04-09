@@ -1,0 +1,788 @@
+school_id,school_name,school_type,division,region,learner_teacher_ratio,is_geographically_isolated,geographic_disadvantage_score
+SCH0001,Ilocos Norte Elementary School 1,Senior High,Ilocos Norte,Region I,47,0,0.324
+SCH0002,Ilocos Norte Junior High School 2,Junior High,Ilocos Norte,Region I,37,0,0.324
+SCH0003,Ilocos Norte Junior High School 3,Elementary,Ilocos Norte,Region I,49,0,0.324
+SCH0004,Ilocos Norte Elementary School 4,Integrated,Ilocos Norte,Region I,62,0,0.324
+SCH0005,Ilocos Norte Elementary School 5,Elementary,Ilocos Norte,Region I,36,0,0.324
+SCH0006,Ilocos Norte Elementary School 6,Junior High,Ilocos Norte,Region I,36,0,0.324
+SCH0007,Ilocos Norte Junior High School 7,Elementary,Ilocos Norte,Region I,63,0,0.324
+SCH0008,Ilocos Norte Junior High School 8,Integrated,Ilocos Norte,Region I,51,0,0.324
+SCH0009,Ilocos Norte Junior High School 9,Integrated,Ilocos Norte,Region I,32,0,0.324
+SCH0010,Ilocos Sur Elementary School 10,Junior High,Ilocos Sur,Region I,48,0,0.306
+SCH0011,Ilocos Sur Integrated School 11,Senior High,Ilocos Sur,Region I,33,0,0.306
+SCH0012,Ilocos Sur Senior High School 12,Junior High,Ilocos Sur,Region I,33,0,0.306
+SCH0013,Ilocos Sur Junior High School 13,Senior High,Ilocos Sur,Region I,43,0,0.306
+SCH0014,Ilocos Sur Elementary School 14,Elementary,Ilocos Sur,Region I,11,0,0.306
+SCH0015,Ilocos Sur Integrated School 15,Elementary,Ilocos Sur,Region I,14,0,0.306
+SCH0016,Ilocos Sur Senior High School 16,Senior High,Ilocos Sur,Region I,31,0,0.306
+SCH0017,Ilocos Sur Senior High School 17,Elementary,Ilocos Sur,Region I,24,0,0.306
+SCH0018,Ilocos Sur Integrated School 18,Elementary,Ilocos Sur,Region I,44,0,0.306
+SCH0019,La Union Integrated School 19,Elementary,La Union,Region I,26,0,0.441
+SCH0020,La Union Senior High School 20,Senior High,La Union,Region I,18,0,0.441
+SCH0021,La Union Junior High School 21,Elementary,La Union,Region I,61,0,0.441
+SCH0022,La Union Elementary School 22,Junior High,La Union,Region I,36,0,0.441
+SCH0023,La Union Senior High School 23,Elementary,La Union,Region I,41,0,0.441
+SCH0024,La Union Junior High School 24,Elementary,La Union,Region I,18,0,0.441
+SCH0025,La Union Integrated School 25,Senior High,La Union,Region I,31,0,0.441
+SCH0026,La Union Integrated School 26,Senior High,La Union,Region I,41,0,0.441
+SCH0027,La Union Junior High School 27,Senior High,La Union,Region I,22,0,0.441
+SCH0028,Pangasinan Senior High School 28,Elementary,Pangasinan,Region I,45,0,0.224
+SCH0029,Pangasinan Junior High School 29,Junior High,Pangasinan,Region I,30,0,0.224
+SCH0030,Pangasinan Junior High School 30,Integrated,Pangasinan,Region I,35,0,0.224
+SCH0031,Pangasinan Integrated School 31,Senior High,Pangasinan,Region I,30,0,0.224
+SCH0032,Pangasinan Junior High School 32,Senior High,Pangasinan,Region I,67,0,0.224
+SCH0033,Pangasinan Elementary School 33,Junior High,Pangasinan,Region I,39,0,0.224
+SCH0034,Pangasinan Elementary School 34,Senior High,Pangasinan,Region I,24,0,0.224
+SCH0035,Pangasinan Integrated School 35,Senior High,Pangasinan,Region I,52,0,0.224
+SCH0036,Batanes Senior High School 36,Junior High,Batanes,Region II,35,1,0.9
+SCH0037,Batanes Integrated School 37,Integrated,Batanes,Region II,43,1,0.9
+SCH0038,Batanes Integrated School 38,Junior High,Batanes,Region II,35,1,0.9
+SCH0039,Batanes Senior High School 39,Junior High,Batanes,Region II,35,1,0.9
+SCH0040,Batanes Junior High School 40,Senior High,Batanes,Region II,42,1,0.9
+SCH0041,Batanes Integrated School 41,Integrated,Batanes,Region II,51,1,0.9
+SCH0042,Batanes Senior High School 42,Junior High,Batanes,Region II,42,1,0.9
+SCH0043,Batanes Junior High School 43,Integrated,Batanes,Region II,38,1,0.9
+SCH0044,Batanes Elementary School 44,Elementary,Batanes,Region II,35,1,0.9
+SCH0045,Batanes Elementary School 45,Junior High,Batanes,Region II,35,1,0.9
+SCH0046,Batanes Junior High School 46,Integrated,Batanes,Region II,35,1,0.9
+SCH0047,Cagayan Integrated School 47,Integrated,Cagayan,Region II,33,0,0.309
+SCH0048,Cagayan Integrated School 48,Senior High,Cagayan,Region II,55,0,0.309
+SCH0049,Cagayan Elementary School 49,Elementary,Cagayan,Region II,45,0,0.309
+SCH0050,Cagayan Senior High School 50,Senior High,Cagayan,Region II,13,0,0.309
+SCH0051,Cagayan Elementary School 51,Senior High,Cagayan,Region II,44,0,0.309
+SCH0052,Cagayan Integrated School 52,Junior High,Cagayan,Region II,34,0,0.309
+SCH0053,Cagayan Integrated School 53,Elementary,Cagayan,Region II,29,0,0.309
+SCH0054,Cagayan Senior High School 54,Junior High,Cagayan,Region II,49,0,0.309
+SCH0055,Cagayan Elementary School 55,Senior High,Cagayan,Region II,55,0,0.309
+SCH0056,Isabela Junior High School 56,Junior High,Isabela,Region II,53,0,0.395
+SCH0057,Isabela Senior High School 57,Junior High,Isabela,Region II,27,0,0.395
+SCH0058,Isabela Elementary School 58,Senior High,Isabela,Region II,35,0,0.395
+SCH0059,Isabela Integrated School 59,Elementary,Isabela,Region II,44,0,0.395
+SCH0060,Isabela Elementary School 60,Senior High,Isabela,Region II,54,0,0.395
+SCH0061,Isabela Senior High School 61,Junior High,Isabela,Region II,32,0,0.395
+SCH0062,Isabela Elementary School 62,Junior High,Isabela,Region II,37,0,0.395
+SCH0063,Isabela Elementary School 63,Elementary,Isabela,Region II,23,0,0.395
+SCH0064,Isabela Integrated School 64,Elementary,Isabela,Region II,22,0,0.395
+SCH0065,Nueva Vizcaya Junior High School 65,Junior High,Nueva Vizcaya,Region II,52,0,0.442
+SCH0066,Nueva Vizcaya Integrated School 66,Junior High,Nueva Vizcaya,Region II,60,0,0.442
+SCH0067,Nueva Vizcaya Senior High School 67,Integrated,Nueva Vizcaya,Region II,38,0,0.442
+SCH0068,Nueva Vizcaya Junior High School 68,Junior High,Nueva Vizcaya,Region II,55,0,0.442
+SCH0069,Nueva Vizcaya Senior High School 69,Integrated,Nueva Vizcaya,Region II,45,0,0.442
+SCH0070,Nueva Vizcaya Senior High School 70,Integrated,Nueva Vizcaya,Region II,30,0,0.442
+SCH0071,Nueva Vizcaya Integrated School 71,Elementary,Nueva Vizcaya,Region II,45,0,0.442
+SCH0072,Nueva Vizcaya Junior High School 72,Junior High,Nueva Vizcaya,Region II,63,0,0.442
+SCH0073,Nueva Vizcaya Elementary School 73,Senior High,Nueva Vizcaya,Region II,39,0,0.442
+SCH0074,Quirino Junior High School 74,Junior High,Quirino,Region II,63,1,0.7
+SCH0075,Quirino Elementary School 75,Elementary,Quirino,Region II,10,1,0.7
+SCH0076,Quirino Elementary School 76,Junior High,Quirino,Region II,52,1,0.7
+SCH0077,Quirino Elementary School 77,Elementary,Quirino,Region II,41,1,0.7
+SCH0078,Quirino Senior High School 78,Elementary,Quirino,Region II,35,1,0.7
+SCH0079,Quirino Junior High School 79,Senior High,Quirino,Region II,41,1,0.7
+SCH0080,Quirino Integrated School 80,Junior High,Quirino,Region II,10,1,0.7
+SCH0081,Quirino Junior High School 81,Integrated,Quirino,Region II,36,1,0.7
+SCH0082,Quirino Junior High School 82,Integrated,Quirino,Region II,45,1,0.7
+SCH0083,Quirino Integrated School 83,Junior High,Quirino,Region II,62,1,0.7
+SCH0084,Aurora Integrated School 84,Senior High,Aurora,Region III,32,0,0.133
+SCH0085,Aurora Integrated School 85,Integrated,Aurora,Region III,27,0,0.133
+SCH0086,Aurora Integrated School 86,Elementary,Aurora,Region III,32,0,0.133
+SCH0087,Aurora Elementary School 87,Elementary,Aurora,Region III,53,0,0.133
+SCH0088,Aurora Integrated School 88,Senior High,Aurora,Region III,44,0,0.133
+SCH0089,Aurora Elementary School 89,Junior High,Aurora,Region III,32,0,0.133
+SCH0090,Aurora Junior High School 90,Junior High,Aurora,Region III,47,0,0.133
+SCH0091,Aurora Integrated School 91,Junior High,Aurora,Region III,41,0,0.133
+SCH0092,Bataan Senior High School 92,Integrated,Bataan,Region III,54,0,0.248
+SCH0093,Bataan Junior High School 93,Elementary,Bataan,Region III,29,0,0.248
+SCH0094,Bataan Integrated School 94,Elementary,Bataan,Region III,35,0,0.248
+SCH0095,Bataan Elementary School 95,Elementary,Bataan,Region III,34,0,0.248
+SCH0096,Bataan Elementary School 96,Junior High,Bataan,Region III,18,0,0.248
+SCH0097,Bataan Junior High School 97,Integrated,Bataan,Region III,44,0,0.248
+SCH0098,Bataan Integrated School 98,Integrated,Bataan,Region III,43,0,0.248
+SCH0099,Bataan Junior High School 99,Integrated,Bataan,Region III,40,0,0.248
+SCH0100,Bulacan Junior High School 100,Integrated,Bulacan,Region III,36,0,0.416
+SCH0101,Bulacan Elementary School 101,Integrated,Bulacan,Region III,18,0,0.416
+SCH0102,Bulacan Senior High School 102,Integrated,Bulacan,Region III,33,0,0.416
+SCH0103,Bulacan Senior High School 103,Integrated,Bulacan,Region III,34,0,0.416
+SCH0104,Bulacan Integrated School 104,Junior High,Bulacan,Region III,27,0,0.416
+SCH0105,Bulacan Junior High School 105,Senior High,Bulacan,Region III,37,0,0.416
+SCH0106,Bulacan Junior High School 106,Elementary,Bulacan,Region III,46,0,0.416
+SCH0107,Bulacan Elementary School 107,Senior High,Bulacan,Region III,68,0,0.416
+SCH0108,Bulacan Elementary School 108,Elementary,Bulacan,Region III,42,0,0.416
+SCH0109,Nueva Ecija Junior High School 109,Elementary,Nueva Ecija,Region III,43,0,0.304
+SCH0110,Nueva Ecija Elementary School 110,Junior High,Nueva Ecija,Region III,38,0,0.304
+SCH0111,Nueva Ecija Elementary School 111,Elementary,Nueva Ecija,Region III,11,0,0.304
+SCH0112,Nueva Ecija Junior High School 112,Integrated,Nueva Ecija,Region III,39,0,0.304
+SCH0113,Nueva Ecija Elementary School 113,Junior High,Nueva Ecija,Region III,40,0,0.304
+SCH0114,Nueva Ecija Elementary School 114,Elementary,Nueva Ecija,Region III,76,0,0.304
+SCH0115,Nueva Ecija Integrated School 115,Senior High,Nueva Ecija,Region III,37,0,0.304
+SCH0116,Nueva Ecija Senior High School 116,Junior High,Nueva Ecija,Region III,44,0,0.304
+SCH0117,Nueva Ecija Senior High School 117,Junior High,Nueva Ecija,Region III,39,0,0.304
+SCH0118,Pampanga Junior High School 118,Senior High,Pampanga,Region III,22,0,0.193
+SCH0119,Pampanga Integrated School 119,Senior High,Pampanga,Region III,57,0,0.193
+SCH0120,Pampanga Elementary School 120,Elementary,Pampanga,Region III,51,0,0.193
+SCH0121,Pampanga Integrated School 121,Elementary,Pampanga,Region III,51,0,0.193
+SCH0122,Pampanga Elementary School 122,Junior High,Pampanga,Region III,26,0,0.193
+SCH0123,Pampanga Senior High School 123,Junior High,Pampanga,Region III,61,0,0.193
+SCH0124,Pampanga Senior High School 124,Elementary,Pampanga,Region III,18,0,0.193
+SCH0125,Pampanga Junior High School 125,Senior High,Pampanga,Region III,48,0,0.193
+SCH0126,Tarlac Integrated School 126,Senior High,Tarlac,Region III,72,0,0.2
+SCH0127,Tarlac Elementary School 127,Senior High,Tarlac,Region III,25,0,0.2
+SCH0128,Tarlac Elementary School 128,Junior High,Tarlac,Region III,31,0,0.2
+SCH0129,Tarlac Senior High School 129,Elementary,Tarlac,Region III,41,0,0.2
+SCH0130,Tarlac Elementary School 130,Junior High,Tarlac,Region III,32,0,0.2
+SCH0131,Tarlac Senior High School 131,Senior High,Tarlac,Region III,16,0,0.2
+SCH0132,Tarlac Junior High School 132,Senior High,Tarlac,Region III,41,0,0.2
+SCH0133,Tarlac Junior High School 133,Senior High,Tarlac,Region III,24,0,0.2
+SCH0134,Zambales Senior High School 134,Elementary,Zambales,Region III,47,0,0.277
+SCH0135,Zambales Elementary School 135,Integrated,Zambales,Region III,26,0,0.277
+SCH0136,Zambales Senior High School 136,Elementary,Zambales,Region III,63,0,0.277
+SCH0137,Zambales Elementary School 137,Senior High,Zambales,Region III,28,0,0.277
+SCH0138,Zambales Junior High School 138,Senior High,Zambales,Region III,35,0,0.277
+SCH0139,Zambales Junior High School 139,Integrated,Zambales,Region III,52,0,0.277
+SCH0140,Zambales Integrated School 140,Elementary,Zambales,Region III,21,0,0.277
+SCH0141,Zambales Elementary School 141,Elementary,Zambales,Region III,43,0,0.277
+SCH0142,Zambales Junior High School 142,Elementary,Zambales,Region III,59,0,0.277
+SCH0143,Batangas Junior High School 143,Integrated,Batangas,Region IV-A,15,0,0.392
+SCH0144,Batangas Junior High School 144,Elementary,Batangas,Region IV-A,42,0,0.392
+SCH0145,Batangas Senior High School 145,Senior High,Batangas,Region IV-A,43,0,0.392
+SCH0146,Batangas Elementary School 146,Senior High,Batangas,Region IV-A,51,0,0.392
+SCH0147,Batangas Junior High School 147,Junior High,Batangas,Region IV-A,21,0,0.392
+SCH0148,Batangas Elementary School 148,Senior High,Batangas,Region IV-A,20,0,0.392
+SCH0149,Batangas Integrated School 149,Junior High,Batangas,Region IV-A,47,0,0.392
+SCH0150,Batangas Junior High School 150,Junior High,Batangas,Region IV-A,44,0,0.392
+SCH0151,Batangas Junior High School 151,Integrated,Batangas,Region IV-A,43,0,0.392
+SCH0152,Cavite Senior High School 152,Integrated,Cavite,Region IV-A,45,0,0.109
+SCH0153,Cavite Junior High School 153,Senior High,Cavite,Region IV-A,29,0,0.109
+SCH0154,Cavite Junior High School 154,Elementary,Cavite,Region IV-A,43,0,0.109
+SCH0155,Cavite Integrated School 155,Elementary,Cavite,Region IV-A,44,0,0.109
+SCH0156,Cavite Integrated School 156,Junior High,Cavite,Region IV-A,29,0,0.109
+SCH0157,Cavite Junior High School 157,Integrated,Cavite,Region IV-A,67,0,0.109
+SCH0158,Cavite Senior High School 158,Senior High,Cavite,Region IV-A,47,0,0.109
+SCH0159,Cavite Junior High School 159,Junior High,Cavite,Region IV-A,22,0,0.109
+SCH0160,Laguna Junior High School 160,Integrated,Laguna,Region IV-A,49,0,0.108
+SCH0161,Laguna Senior High School 161,Senior High,Laguna,Region IV-A,25,0,0.108
+SCH0162,Laguna Elementary School 162,Senior High,Laguna,Region IV-A,51,0,0.108
+SCH0163,Laguna Senior High School 163,Integrated,Laguna,Region IV-A,57,0,0.108
+SCH0164,Laguna Senior High School 164,Elementary,Laguna,Region IV-A,27,0,0.108
+SCH0165,Laguna Elementary School 165,Senior High,Laguna,Region IV-A,54,0,0.108
+SCH0166,Laguna Junior High School 166,Senior High,Laguna,Region IV-A,46,0,0.108
+SCH0167,Laguna Elementary School 167,Elementary,Laguna,Region IV-A,52,0,0.108
+SCH0168,Quezon Senior High School 168,Senior High,Quezon,Region IV-A,68,0,0.309
+SCH0169,Quezon Integrated School 169,Elementary,Quezon,Region IV-A,36,0,0.309
+SCH0170,Quezon Integrated School 170,Junior High,Quezon,Region IV-A,28,0,0.309
+SCH0171,Quezon Senior High School 171,Elementary,Quezon,Region IV-A,26,0,0.309
+SCH0172,Quezon Integrated School 172,Elementary,Quezon,Region IV-A,27,0,0.309
+SCH0173,Quezon Junior High School 173,Senior High,Quezon,Region IV-A,38,0,0.309
+SCH0174,Quezon Integrated School 174,Elementary,Quezon,Region IV-A,45,0,0.309
+SCH0175,Quezon Senior High School 175,Senior High,Quezon,Region IV-A,44,0,0.309
+SCH0176,Quezon Elementary School 176,Senior High,Quezon,Region IV-A,52,0,0.309
+SCH0177,Rizal Integrated School 177,Senior High,Rizal,Region IV-A,40,0,0.277
+SCH0178,Rizal Integrated School 178,Senior High,Rizal,Region IV-A,61,0,0.277
+SCH0179,Rizal Junior High School 179,Junior High,Rizal,Region IV-A,36,0,0.277
+SCH0180,Rizal Integrated School 180,Integrated,Rizal,Region IV-A,80,0,0.277
+SCH0181,Rizal Junior High School 181,Senior High,Rizal,Region IV-A,49,0,0.277
+SCH0182,Rizal Integrated School 182,Elementary,Rizal,Region IV-A,27,0,0.277
+SCH0183,Rizal Senior High School 183,Senior High,Rizal,Region IV-A,23,0,0.277
+SCH0184,Rizal Junior High School 184,Integrated,Rizal,Region IV-A,47,0,0.277
+SCH0185,Rizal Senior High School 185,Integrated,Rizal,Region IV-A,36,0,0.277
+SCH0186,Marinduque Junior High School 186,Integrated,Marinduque,Region IV-B,50,0,0.6
+SCH0187,Marinduque Junior High School 187,Elementary,Marinduque,Region IV-B,47,0,0.6
+SCH0188,Marinduque Senior High School 188,Senior High,Marinduque,Region IV-B,38,0,0.6
+SCH0189,Marinduque Elementary School 189,Junior High,Marinduque,Region IV-B,27,0,0.6
+SCH0190,Marinduque Senior High School 190,Junior High,Marinduque,Region IV-B,17,0,0.6
+SCH0191,Marinduque Junior High School 191,Junior High,Marinduque,Region IV-B,33,0,0.6
+SCH0192,Marinduque Elementary School 192,Elementary,Marinduque,Region IV-B,52,0,0.6
+SCH0193,Marinduque Junior High School 193,Integrated,Marinduque,Region IV-B,43,0,0.6
+SCH0194,Marinduque Elementary School 194,Integrated,Marinduque,Region IV-B,21,0,0.6
+SCH0195,Marinduque Integrated School 195,Junior High,Marinduque,Region IV-B,42,0,0.6
+SCH0196,Occidental Mindoro Integrated School 196,Integrated,Occidental Mindoro,Region IV-B,45,0,0.6
+SCH0197,Occidental Mindoro Integrated School 197,Junior High,Occidental Mindoro,Region IV-B,26,0,0.6
+SCH0198,Occidental Mindoro Junior High School 198,Elementary,Occidental Mindoro,Region IV-B,42,0,0.6
+SCH0199,Occidental Mindoro Elementary School 199,Integrated,Occidental Mindoro,Region IV-B,40,0,0.6
+SCH0200,Occidental Mindoro Junior High School 200,Junior High,Occidental Mindoro,Region IV-B,22,0,0.6
+SCH0201,Occidental Mindoro Integrated School 201,Elementary,Occidental Mindoro,Region IV-B,45,0,0.6
+SCH0202,Occidental Mindoro Junior High School 202,Elementary,Occidental Mindoro,Region IV-B,48,0,0.6
+SCH0203,Occidental Mindoro Integrated School 203,Junior High,Occidental Mindoro,Region IV-B,56,0,0.6
+SCH0204,Occidental Mindoro Integrated School 204,Senior High,Occidental Mindoro,Region IV-B,55,0,0.6
+SCH0205,Occidental Mindoro Integrated School 205,Integrated,Occidental Mindoro,Region IV-B,19,0,0.6
+SCH0206,Oriental Mindoro Integrated School 206,Junior High,Oriental Mindoro,Region IV-B,25,0,0.55
+SCH0207,Oriental Mindoro Integrated School 207,Integrated,Oriental Mindoro,Region IV-B,47,0,0.55
+SCH0208,Oriental Mindoro Senior High School 208,Junior High,Oriental Mindoro,Region IV-B,47,0,0.55
+SCH0209,Oriental Mindoro Senior High School 209,Integrated,Oriental Mindoro,Region IV-B,47,0,0.55
+SCH0210,Oriental Mindoro Junior High School 210,Senior High,Oriental Mindoro,Region IV-B,80,0,0.55
+SCH0211,Oriental Mindoro Integrated School 211,Elementary,Oriental Mindoro,Region IV-B,48,0,0.55
+SCH0212,Oriental Mindoro Senior High School 212,Junior High,Oriental Mindoro,Region IV-B,57,0,0.55
+SCH0213,Oriental Mindoro Senior High School 213,Senior High,Oriental Mindoro,Region IV-B,54,0,0.55
+SCH0214,Oriental Mindoro Senior High School 214,Elementary,Oriental Mindoro,Region IV-B,49,0,0.55
+SCH0215,Oriental Mindoro Junior High School 215,Junior High,Oriental Mindoro,Region IV-B,35,0,0.55
+SCH0216,Palawan Junior High School 216,Junior High,Palawan,Region IV-B,51,1,0.8
+SCH0217,Palawan Elementary School 217,Integrated,Palawan,Region IV-B,35,1,0.8
+SCH0218,Palawan Integrated School 218,Senior High,Palawan,Region IV-B,36,1,0.8
+SCH0219,Palawan Integrated School 219,Integrated,Palawan,Region IV-B,35,1,0.8
+SCH0220,Palawan Elementary School 220,Junior High,Palawan,Region IV-B,41,1,0.8
+SCH0221,Palawan Integrated School 221,Integrated,Palawan,Region IV-B,74,1,0.8
+SCH0222,Palawan Elementary School 222,Integrated,Palawan,Region IV-B,35,1,0.8
+SCH0223,Palawan Integrated School 223,Elementary,Palawan,Region IV-B,50,1,0.8
+SCH0224,Palawan Senior High School 224,Senior High,Palawan,Region IV-B,35,1,0.8
+SCH0225,Palawan Integrated School 225,Integrated,Palawan,Region IV-B,35,1,0.8
+SCH0226,Palawan Junior High School 226,Integrated,Palawan,Region IV-B,56,1,0.8
+SCH0227,Romblon Integrated School 227,Integrated,Romblon,Region IV-B,40,0,0.65
+SCH0228,Romblon Elementary School 228,Integrated,Romblon,Region IV-B,23,0,0.65
+SCH0229,Romblon Senior High School 229,Integrated,Romblon,Region IV-B,29,0,0.65
+SCH0230,Romblon Junior High School 230,Integrated,Romblon,Region IV-B,50,0,0.65
+SCH0231,Romblon Junior High School 231,Elementary,Romblon,Region IV-B,29,0,0.65
+SCH0232,Romblon Integrated School 232,Elementary,Romblon,Region IV-B,43,0,0.65
+SCH0233,Romblon Elementary School 233,Integrated,Romblon,Region IV-B,40,0,0.65
+SCH0234,Romblon Junior High School 234,Integrated,Romblon,Region IV-B,30,0,0.65
+SCH0235,Romblon Junior High School 235,Elementary,Romblon,Region IV-B,72,0,0.65
+SCH0236,Romblon Senior High School 236,Integrated,Romblon,Region IV-B,49,0,0.65
+SCH0237,Albay Integrated School 237,Senior High,Albay,Region V,10,0,0.215
+SCH0238,Albay Senior High School 238,Integrated,Albay,Region V,42,0,0.215
+SCH0239,Albay Senior High School 239,Integrated,Albay,Region V,30,0,0.215
+SCH0240,Albay Senior High School 240,Elementary,Albay,Region V,52,0,0.215
+SCH0241,Albay Integrated School 241,Elementary,Albay,Region V,28,0,0.215
+SCH0242,Albay Elementary School 242,Senior High,Albay,Region V,38,0,0.215
+SCH0243,Albay Junior High School 243,Elementary,Albay,Region V,47,0,0.215
+SCH0244,Albay Elementary School 244,Elementary,Albay,Region V,52,0,0.215
+SCH0245,Camarines Norte Junior High School 245,Elementary,Camarines Norte,Region V,21,0,0.432
+SCH0246,Camarines Norte Junior High School 246,Junior High,Camarines Norte,Region V,34,0,0.432
+SCH0247,Camarines Norte Junior High School 247,Integrated,Camarines Norte,Region V,32,0,0.432
+SCH0248,Camarines Norte Elementary School 248,Junior High,Camarines Norte,Region V,30,0,0.432
+SCH0249,Camarines Norte Integrated School 249,Senior High,Camarines Norte,Region V,66,0,0.432
+SCH0250,Camarines Norte Senior High School 250,Junior High,Camarines Norte,Region V,46,0,0.432
+SCH0251,Camarines Norte Elementary School 251,Junior High,Camarines Norte,Region V,21,0,0.432
+SCH0252,Camarines Norte Senior High School 252,Elementary,Camarines Norte,Region V,53,0,0.432
+SCH0253,Camarines Norte Elementary School 253,Senior High,Camarines Norte,Region V,71,0,0.432
+SCH0254,Camarines Sur Integrated School 254,Integrated,Camarines Sur,Region V,55,0,0.302
+SCH0255,Camarines Sur Junior High School 255,Elementary,Camarines Sur,Region V,17,0,0.302
+SCH0256,Camarines Sur Junior High School 256,Elementary,Camarines Sur,Region V,32,0,0.302
+SCH0257,Camarines Sur Senior High School 257,Elementary,Camarines Sur,Region V,59,0,0.302
+SCH0258,Camarines Sur Elementary School 258,Senior High,Camarines Sur,Region V,29,0,0.302
+SCH0259,Camarines Sur Integrated School 259,Senior High,Camarines Sur,Region V,46,0,0.302
+SCH0260,Camarines Sur Elementary School 260,Senior High,Camarines Sur,Region V,51,0,0.302
+SCH0261,Camarines Sur Elementary School 261,Integrated,Camarines Sur,Region V,26,0,0.302
+SCH0262,Camarines Sur Integrated School 262,Elementary,Camarines Sur,Region V,39,0,0.302
+SCH0263,Catanduanes Senior High School 263,Integrated,Catanduanes,Region V,10,0,0.65
+SCH0264,Catanduanes Junior High School 264,Integrated,Catanduanes,Region V,24,0,0.65
+SCH0265,Catanduanes Junior High School 265,Senior High,Catanduanes,Region V,36,0,0.65
+SCH0266,Catanduanes Integrated School 266,Integrated,Catanduanes,Region V,21,0,0.65
+SCH0267,Catanduanes Integrated School 267,Senior High,Catanduanes,Region V,64,0,0.65
+SCH0268,Catanduanes Senior High School 268,Junior High,Catanduanes,Region V,18,0,0.65
+SCH0269,Catanduanes Elementary School 269,Senior High,Catanduanes,Region V,33,0,0.65
+SCH0270,Catanduanes Integrated School 270,Junior High,Catanduanes,Region V,41,0,0.65
+SCH0271,Catanduanes Integrated School 271,Integrated,Catanduanes,Region V,61,0,0.65
+SCH0272,Catanduanes Senior High School 272,Elementary,Catanduanes,Region V,18,0,0.65
+SCH0273,Masbate Senior High School 273,Junior High,Masbate,Region V,57,1,0.7
+SCH0274,Masbate Integrated School 274,Junior High,Masbate,Region V,40,1,0.7
+SCH0275,Masbate Senior High School 275,Senior High,Masbate,Region V,25,1,0.7
+SCH0276,Masbate Senior High School 276,Senior High,Masbate,Region V,46,1,0.7
+SCH0277,Masbate Senior High School 277,Elementary,Masbate,Region V,42,1,0.7
+SCH0278,Masbate Junior High School 278,Elementary,Masbate,Region V,30,1,0.7
+SCH0279,Masbate Junior High School 279,Integrated,Masbate,Region V,41,1,0.7
+SCH0280,Masbate Integrated School 280,Junior High,Masbate,Region V,34,1,0.7
+SCH0281,Masbate Integrated School 281,Integrated,Masbate,Region V,41,1,0.7
+SCH0282,Masbate Integrated School 282,Elementary,Masbate,Region V,49,1,0.7
+SCH0283,Sorsogon Junior High School 283,Integrated,Sorsogon,Region V,63,0,0.133
+SCH0284,Sorsogon Junior High School 284,Senior High,Sorsogon,Region V,21,0,0.133
+SCH0285,Sorsogon Senior High School 285,Integrated,Sorsogon,Region V,71,0,0.133
+SCH0286,Sorsogon Senior High School 286,Integrated,Sorsogon,Region V,10,0,0.133
+SCH0287,Sorsogon Senior High School 287,Senior High,Sorsogon,Region V,37,0,0.133
+SCH0288,Sorsogon Integrated School 288,Senior High,Sorsogon,Region V,48,0,0.133
+SCH0289,Sorsogon Senior High School 289,Senior High,Sorsogon,Region V,44,0,0.133
+SCH0290,Sorsogon Junior High School 290,Elementary,Sorsogon,Region V,30,0,0.133
+SCH0291,Aklan Senior High School 291,Elementary,Aklan,Region VI,36,0,0.352
+SCH0292,Aklan Junior High School 292,Junior High,Aklan,Region VI,32,0,0.352
+SCH0293,Aklan Junior High School 293,Integrated,Aklan,Region VI,31,0,0.352
+SCH0294,Aklan Senior High School 294,Senior High,Aklan,Region VI,52,0,0.352
+SCH0295,Aklan Elementary School 295,Junior High,Aklan,Region VI,45,0,0.352
+SCH0296,Aklan Senior High School 296,Junior High,Aklan,Region VI,29,0,0.352
+SCH0297,Aklan Senior High School 297,Junior High,Aklan,Region VI,53,0,0.352
+SCH0298,Aklan Senior High School 298,Elementary,Aklan,Region VI,44,0,0.352
+SCH0299,Aklan Junior High School 299,Senior High,Aklan,Region VI,52,0,0.352
+SCH0300,Antique Elementary School 300,Senior High,Antique,Region VI,49,0,0.116
+SCH0301,Antique Junior High School 301,Integrated,Antique,Region VI,27,0,0.116
+SCH0302,Antique Elementary School 302,Elementary,Antique,Region VI,31,0,0.116
+SCH0303,Antique Senior High School 303,Integrated,Antique,Region VI,51,0,0.116
+SCH0304,Antique Integrated School 304,Integrated,Antique,Region VI,49,0,0.116
+SCH0305,Antique Senior High School 305,Junior High,Antique,Region VI,39,0,0.116
+SCH0306,Antique Elementary School 306,Senior High,Antique,Region VI,41,0,0.116
+SCH0307,Antique Integrated School 307,Elementary,Antique,Region VI,59,0,0.116
+SCH0308,Capiz Integrated School 308,Integrated,Capiz,Region VI,31,0,0.388
+SCH0309,Capiz Elementary School 309,Elementary,Capiz,Region VI,48,0,0.388
+SCH0310,Capiz Junior High School 310,Junior High,Capiz,Region VI,36,0,0.388
+SCH0311,Capiz Senior High School 311,Elementary,Capiz,Region VI,36,0,0.388
+SCH0312,Capiz Junior High School 312,Elementary,Capiz,Region VI,56,0,0.388
+SCH0313,Capiz Integrated School 313,Junior High,Capiz,Region VI,52,0,0.388
+SCH0314,Capiz Integrated School 314,Integrated,Capiz,Region VI,52,0,0.388
+SCH0315,Capiz Integrated School 315,Senior High,Capiz,Region VI,59,0,0.388
+SCH0316,Capiz Integrated School 316,Senior High,Capiz,Region VI,40,0,0.388
+SCH0317,Guimaras Elementary School 317,Elementary,Guimaras,Region VI,50,0,0.299
+SCH0318,Guimaras Junior High School 318,Junior High,Guimaras,Region VI,35,0,0.299
+SCH0319,Guimaras Senior High School 319,Elementary,Guimaras,Region VI,44,0,0.299
+SCH0320,Guimaras Junior High School 320,Junior High,Guimaras,Region VI,38,0,0.299
+SCH0321,Guimaras Junior High School 321,Elementary,Guimaras,Region VI,41,0,0.299
+SCH0322,Guimaras Junior High School 322,Elementary,Guimaras,Region VI,48,0,0.299
+SCH0323,Guimaras Integrated School 323,Integrated,Guimaras,Region VI,27,0,0.299
+SCH0324,Guimaras Integrated School 324,Senior High,Guimaras,Region VI,71,0,0.299
+SCH0325,Guimaras Elementary School 325,Junior High,Guimaras,Region VI,24,0,0.299
+SCH0326,Iloilo Senior High School 326,Integrated,Iloilo,Region VI,21,0,0.201
+SCH0327,Iloilo Elementary School 327,Junior High,Iloilo,Region VI,57,0,0.201
+SCH0328,Iloilo Senior High School 328,Junior High,Iloilo,Region VI,51,0,0.201
+SCH0329,Iloilo Integrated School 329,Elementary,Iloilo,Region VI,49,0,0.201
+SCH0330,Iloilo Junior High School 330,Junior High,Iloilo,Region VI,49,0,0.201
+SCH0331,Iloilo Senior High School 331,Junior High,Iloilo,Region VI,39,0,0.201
+SCH0332,Iloilo Elementary School 332,Elementary,Iloilo,Region VI,26,0,0.201
+SCH0333,Iloilo Junior High School 333,Senior High,Iloilo,Region VI,41,0,0.201
+SCH0334,Negros Occidental Senior High School 334,Integrated,Negros Occidental,Region VI,29,0,0.308
+SCH0335,Negros Occidental Elementary School 335,Integrated,Negros Occidental,Region VI,54,0,0.308
+SCH0336,Negros Occidental Senior High School 336,Integrated,Negros Occidental,Region VI,37,0,0.308
+SCH0337,Negros Occidental Senior High School 337,Integrated,Negros Occidental,Region VI,27,0,0.308
+SCH0338,Negros Occidental Integrated School 338,Elementary,Negros Occidental,Region VI,35,0,0.308
+SCH0339,Negros Occidental Elementary School 339,Integrated,Negros Occidental,Region VI,46,0,0.308
+SCH0340,Negros Occidental Senior High School 340,Senior High,Negros Occidental,Region VI,31,0,0.308
+SCH0341,Negros Occidental Elementary School 341,Elementary,Negros Occidental,Region VI,27,0,0.308
+SCH0342,Negros Occidental Junior High School 342,Elementary,Negros Occidental,Region VI,43,0,0.308
+SCH0343,Bohol Senior High School 343,Elementary,Bohol,Region VII,43,0,0.45
+SCH0344,Bohol Junior High School 344,Integrated,Bohol,Region VII,32,0,0.45
+SCH0345,Bohol Integrated School 345,Senior High,Bohol,Region VII,32,0,0.45
+SCH0346,Bohol Junior High School 346,Integrated,Bohol,Region VII,43,0,0.45
+SCH0347,Bohol Integrated School 347,Elementary,Bohol,Region VII,18,0,0.45
+SCH0348,Bohol Integrated School 348,Senior High,Bohol,Region VII,18,0,0.45
+SCH0349,Bohol Integrated School 349,Senior High,Bohol,Region VII,29,0,0.45
+SCH0350,Bohol Senior High School 350,Elementary,Bohol,Region VII,36,0,0.45
+SCH0351,Bohol Junior High School 351,Senior High,Bohol,Region VII,44,0,0.45
+SCH0352,Cebu Integrated School 352,Senior High,Cebu,Region VII,62,0,0.244
+SCH0353,Cebu Integrated School 353,Elementary,Cebu,Region VII,52,0,0.244
+SCH0354,Cebu Integrated School 354,Elementary,Cebu,Region VII,37,0,0.244
+SCH0355,Cebu Senior High School 355,Senior High,Cebu,Region VII,39,0,0.244
+SCH0356,Cebu Senior High School 356,Elementary,Cebu,Region VII,24,0,0.244
+SCH0357,Cebu Integrated School 357,Elementary,Cebu,Region VII,39,0,0.244
+SCH0358,Cebu Integrated School 358,Integrated,Cebu,Region VII,35,0,0.244
+SCH0359,Cebu Elementary School 359,Junior High,Cebu,Region VII,44,0,0.244
+SCH0360,Negros Oriental Integrated School 360,Integrated,Negros Oriental,Region VII,27,0,0.281
+SCH0361,Negros Oriental Elementary School 361,Junior High,Negros Oriental,Region VII,47,0,0.281
+SCH0362,Negros Oriental Senior High School 362,Junior High,Negros Oriental,Region VII,62,0,0.281
+SCH0363,Negros Oriental Senior High School 363,Integrated,Negros Oriental,Region VII,38,0,0.281
+SCH0364,Negros Oriental Integrated School 364,Elementary,Negros Oriental,Region VII,46,0,0.281
+SCH0365,Negros Oriental Elementary School 365,Junior High,Negros Oriental,Region VII,50,0,0.281
+SCH0366,Negros Oriental Junior High School 366,Senior High,Negros Oriental,Region VII,33,0,0.281
+SCH0367,Negros Oriental Elementary School 367,Integrated,Negros Oriental,Region VII,43,0,0.281
+SCH0368,Negros Oriental Elementary School 368,Junior High,Negros Oriental,Region VII,40,0,0.281
+SCH0369,Siquijor Elementary School 369,Integrated,Siquijor,Region VII,41,0,0.447
+SCH0370,Siquijor Elementary School 370,Junior High,Siquijor,Region VII,28,0,0.447
+SCH0371,Siquijor Integrated School 371,Senior High,Siquijor,Region VII,40,0,0.447
+SCH0372,Siquijor Senior High School 372,Integrated,Siquijor,Region VII,47,0,0.447
+SCH0373,Siquijor Integrated School 373,Integrated,Siquijor,Region VII,61,0,0.447
+SCH0374,Siquijor Junior High School 374,Integrated,Siquijor,Region VII,54,0,0.447
+SCH0375,Siquijor Junior High School 375,Integrated,Siquijor,Region VII,72,0,0.447
+SCH0376,Siquijor Junior High School 376,Junior High,Siquijor,Region VII,28,0,0.447
+SCH0377,Siquijor Elementary School 377,Senior High,Siquijor,Region VII,53,0,0.447
+SCH0378,Biliran Integrated School 378,Senior High,Biliran,Region VIII,42,0,0.37
+SCH0379,Biliran Senior High School 379,Elementary,Biliran,Region VIII,72,0,0.37
+SCH0380,Biliran Senior High School 380,Senior High,Biliran,Region VIII,27,0,0.37
+SCH0381,Biliran Integrated School 381,Junior High,Biliran,Region VIII,27,0,0.37
+SCH0382,Biliran Integrated School 382,Integrated,Biliran,Region VIII,31,0,0.37
+SCH0383,Biliran Senior High School 383,Senior High,Biliran,Region VIII,10,0,0.37
+SCH0384,Biliran Integrated School 384,Integrated,Biliran,Region VIII,32,0,0.37
+SCH0385,Biliran Senior High School 385,Junior High,Biliran,Region VIII,28,0,0.37
+SCH0386,Biliran Junior High School 386,Integrated,Biliran,Region VIII,42,0,0.37
+SCH0387,Eastern Samar Integrated School 387,Elementary,Eastern Samar,Region VIII,45,1,0.75
+SCH0388,Eastern Samar Senior High School 388,Integrated,Eastern Samar,Region VIII,68,1,0.75
+SCH0389,Eastern Samar Integrated School 389,Integrated,Eastern Samar,Region VIII,54,1,0.75
+SCH0390,Eastern Samar Junior High School 390,Integrated,Eastern Samar,Region VIII,35,1,0.75
+SCH0391,Eastern Samar Elementary School 391,Junior High,Eastern Samar,Region VIII,35,1,0.75
+SCH0392,Eastern Samar Senior High School 392,Elementary,Eastern Samar,Region VIII,47,1,0.75
+SCH0393,Eastern Samar Integrated School 393,Elementary,Eastern Samar,Region VIII,35,1,0.75
+SCH0394,Eastern Samar Integrated School 394,Elementary,Eastern Samar,Region VIII,67,1,0.75
+SCH0395,Eastern Samar Junior High School 395,Integrated,Eastern Samar,Region VIII,57,1,0.75
+SCH0396,Eastern Samar Junior High School 396,Elementary,Eastern Samar,Region VIII,35,1,0.75
+SCH0397,Eastern Samar Integrated School 397,Senior High,Eastern Samar,Region VIII,35,1,0.75
+SCH0398,Leyte Integrated School 398,Elementary,Leyte,Region VIII,60,0,0.218
+SCH0399,Leyte Senior High School 399,Integrated,Leyte,Region VIII,38,0,0.218
+SCH0400,Leyte Senior High School 400,Integrated,Leyte,Region VIII,58,0,0.218
+SCH0401,Leyte Elementary School 401,Elementary,Leyte,Region VIII,16,0,0.218
+SCH0402,Leyte Junior High School 402,Senior High,Leyte,Region VIII,31,0,0.218
+SCH0403,Leyte Junior High School 403,Elementary,Leyte,Region VIII,40,0,0.218
+SCH0404,Leyte Integrated School 404,Elementary,Leyte,Region VIII,40,0,0.218
+SCH0405,Leyte Elementary School 405,Integrated,Leyte,Region VIII,33,0,0.218
+SCH0406,Northern Samar Senior High School 406,Elementary,Northern Samar,Region VIII,49,1,0.75
+SCH0407,Northern Samar Elementary School 407,Senior High,Northern Samar,Region VIII,35,1,0.75
+SCH0408,Northern Samar Elementary School 408,Senior High,Northern Samar,Region VIII,37,1,0.75
+SCH0409,Northern Samar Senior High School 409,Senior High,Northern Samar,Region VIII,41,1,0.75
+SCH0410,Northern Samar Integrated School 410,Junior High,Northern Samar,Region VIII,47,1,0.75
+SCH0411,Northern Samar Junior High School 411,Integrated,Northern Samar,Region VIII,50,1,0.75
+SCH0412,Northern Samar Junior High School 412,Junior High,Northern Samar,Region VIII,35,1,0.75
+SCH0413,Northern Samar Junior High School 413,Elementary,Northern Samar,Region VIII,35,1,0.75
+SCH0414,Northern Samar Integrated School 414,Junior High,Northern Samar,Region VIII,59,1,0.75
+SCH0415,Northern Samar Integrated School 415,Junior High,Northern Samar,Region VIII,44,1,0.75
+SCH0416,Northern Samar Junior High School 416,Integrated,Northern Samar,Region VIII,35,1,0.75
+SCH0417,Samar Integrated School 417,Senior High,Samar,Region VIII,63,1,0.7
+SCH0418,Samar Elementary School 418,Integrated,Samar,Region VIII,41,1,0.7
+SCH0419,Samar Senior High School 419,Junior High,Samar,Region VIII,57,1,0.7
+SCH0420,Samar Elementary School 420,Integrated,Samar,Region VIII,41,1,0.7
+SCH0421,Samar Senior High School 421,Senior High,Samar,Region VIII,70,1,0.7
+SCH0422,Samar Integrated School 422,Senior High,Samar,Region VIII,66,1,0.7
+SCH0423,Samar Integrated School 423,Senior High,Samar,Region VIII,36,1,0.7
+SCH0424,Samar Junior High School 424,Integrated,Samar,Region VIII,54,1,0.7
+SCH0425,Samar Integrated School 425,Elementary,Samar,Region VIII,49,1,0.7
+SCH0426,Samar Junior High School 426,Integrated,Samar,Region VIII,60,1,0.7
+SCH0427,Southern Leyte Senior High School 427,Senior High,Southern Leyte,Region VIII,25,0,0.3
+SCH0428,Southern Leyte Elementary School 428,Integrated,Southern Leyte,Region VIII,50,0,0.3
+SCH0429,Southern Leyte Senior High School 429,Elementary,Southern Leyte,Region VIII,55,0,0.3
+SCH0430,Southern Leyte Elementary School 430,Integrated,Southern Leyte,Region VIII,13,0,0.3
+SCH0431,Southern Leyte Senior High School 431,Junior High,Southern Leyte,Region VIII,22,0,0.3
+SCH0432,Southern Leyte Senior High School 432,Junior High,Southern Leyte,Region VIII,10,0,0.3
+SCH0433,Southern Leyte Junior High School 433,Senior High,Southern Leyte,Region VIII,35,0,0.3
+SCH0434,Southern Leyte Junior High School 434,Elementary,Southern Leyte,Region VIII,50,0,0.3
+SCH0435,Southern Leyte Elementary School 435,Senior High,Southern Leyte,Region VIII,62,0,0.3
+SCH0436,Zamboanga del Norte Elementary School 436,Senior High,Zamboanga del Norte,Region IX,41,0,0.376
+SCH0437,Zamboanga del Norte Junior High School 437,Elementary,Zamboanga del Norte,Region IX,64,0,0.376
+SCH0438,Zamboanga del Norte Senior High School 438,Senior High,Zamboanga del Norte,Region IX,19,0,0.376
+SCH0439,Zamboanga del Norte Integrated School 439,Junior High,Zamboanga del Norte,Region IX,14,0,0.376
+SCH0440,Zamboanga del Norte Junior High School 440,Junior High,Zamboanga del Norte,Region IX,39,0,0.376
+SCH0441,Zamboanga del Norte Senior High School 441,Senior High,Zamboanga del Norte,Region IX,45,0,0.376
+SCH0442,Zamboanga del Norte Junior High School 442,Senior High,Zamboanga del Norte,Region IX,39,0,0.376
+SCH0443,Zamboanga del Norte Integrated School 443,Senior High,Zamboanga del Norte,Region IX,10,0,0.376
+SCH0444,Zamboanga del Norte Senior High School 444,Elementary,Zamboanga del Norte,Region IX,38,0,0.376
+SCH0445,Zamboanga del Sur Elementary School 445,Junior High,Zamboanga del Sur,Region IX,20,0,0.264
+SCH0446,Zamboanga del Sur Junior High School 446,Integrated,Zamboanga del Sur,Region IX,50,0,0.264
+SCH0447,Zamboanga del Sur Senior High School 447,Elementary,Zamboanga del Sur,Region IX,45,0,0.264
+SCH0448,Zamboanga del Sur Integrated School 448,Elementary,Zamboanga del Sur,Region IX,25,0,0.264
+SCH0449,Zamboanga del Sur Senior High School 449,Elementary,Zamboanga del Sur,Region IX,32,0,0.264
+SCH0450,Zamboanga del Sur Integrated School 450,Senior High,Zamboanga del Sur,Region IX,24,0,0.264
+SCH0451,Zamboanga del Sur Senior High School 451,Integrated,Zamboanga del Sur,Region IX,39,0,0.264
+SCH0452,Zamboanga del Sur Senior High School 452,Elementary,Zamboanga del Sur,Region IX,54,0,0.264
+SCH0453,Zamboanga del Sur Junior High School 453,Integrated,Zamboanga del Sur,Region IX,25,0,0.264
+SCH0454,Zamboanga Sibugay Senior High School 454,Junior High,Zamboanga Sibugay,Region IX,47,0,0.109
+SCH0455,Zamboanga Sibugay Elementary School 455,Integrated,Zamboanga Sibugay,Region IX,32,0,0.109
+SCH0456,Zamboanga Sibugay Senior High School 456,Integrated,Zamboanga Sibugay,Region IX,28,0,0.109
+SCH0457,Zamboanga Sibugay Elementary School 457,Junior High,Zamboanga Sibugay,Region IX,38,0,0.109
+SCH0458,Zamboanga Sibugay Elementary School 458,Elementary,Zamboanga Sibugay,Region IX,24,0,0.109
+SCH0459,Zamboanga Sibugay Senior High School 459,Integrated,Zamboanga Sibugay,Region IX,31,0,0.109
+SCH0460,Zamboanga Sibugay Elementary School 460,Elementary,Zamboanga Sibugay,Region IX,22,0,0.109
+SCH0461,Zamboanga Sibugay Junior High School 461,Junior High,Zamboanga Sibugay,Region IX,69,0,0.109
+SCH0462,Bukidnon Senior High School 462,Integrated,Bukidnon,Region X,40,0,0.236
+SCH0463,Bukidnon Junior High School 463,Integrated,Bukidnon,Region X,29,0,0.236
+SCH0464,Bukidnon Elementary School 464,Integrated,Bukidnon,Region X,43,0,0.236
+SCH0465,Bukidnon Integrated School 465,Senior High,Bukidnon,Region X,38,0,0.236
+SCH0466,Bukidnon Elementary School 466,Senior High,Bukidnon,Region X,36,0,0.236
+SCH0467,Bukidnon Junior High School 467,Integrated,Bukidnon,Region X,49,0,0.236
+SCH0468,Bukidnon Integrated School 468,Junior High,Bukidnon,Region X,51,0,0.236
+SCH0469,Bukidnon Senior High School 469,Elementary,Bukidnon,Region X,32,0,0.236
+SCH0470,Camiguin Senior High School 470,Senior High,Camiguin,Region X,31,1,0.7
+SCH0471,Camiguin Elementary School 471,Integrated,Camiguin,Region X,35,1,0.7
+SCH0472,Camiguin Senior High School 472,Junior High,Camiguin,Region X,10,1,0.7
+SCH0473,Camiguin Elementary School 473,Integrated,Camiguin,Region X,17,1,0.7
+SCH0474,Camiguin Elementary School 474,Junior High,Camiguin,Region X,60,1,0.7
+SCH0475,Camiguin Elementary School 475,Elementary,Camiguin,Region X,64,1,0.7
+SCH0476,Camiguin Senior High School 476,Junior High,Camiguin,Region X,36,1,0.7
+SCH0477,Camiguin Junior High School 477,Junior High,Camiguin,Region X,48,1,0.7
+SCH0478,Camiguin Elementary School 478,Junior High,Camiguin,Region X,44,1,0.7
+SCH0479,Camiguin Junior High School 479,Junior High,Camiguin,Region X,80,1,0.7
+SCH0480,Lanao del Norte Junior High School 480,Elementary,Lanao del Norte,Region X,56,0,0.215
+SCH0481,Lanao del Norte Senior High School 481,Junior High,Lanao del Norte,Region X,38,0,0.215
+SCH0482,Lanao del Norte Junior High School 482,Senior High,Lanao del Norte,Region X,25,0,0.215
+SCH0483,Lanao del Norte Junior High School 483,Elementary,Lanao del Norte,Region X,15,0,0.215
+SCH0484,Lanao del Norte Elementary School 484,Junior High,Lanao del Norte,Region X,43,0,0.215
+SCH0485,Lanao del Norte Elementary School 485,Senior High,Lanao del Norte,Region X,28,0,0.215
+SCH0486,Lanao del Norte Junior High School 486,Senior High,Lanao del Norte,Region X,18,0,0.215
+SCH0487,Lanao del Norte Elementary School 487,Junior High,Lanao del Norte,Region X,30,0,0.215
+SCH0488,Misamis Occidental Junior High School 488,Integrated,Misamis Occidental,Region X,23,0,0.193
+SCH0489,Misamis Occidental Elementary School 489,Elementary,Misamis Occidental,Region X,65,0,0.193
+SCH0490,Misamis Occidental Integrated School 490,Integrated,Misamis Occidental,Region X,53,0,0.193
+SCH0491,Misamis Occidental Senior High School 491,Elementary,Misamis Occidental,Region X,39,0,0.193
+SCH0492,Misamis Occidental Integrated School 492,Junior High,Misamis Occidental,Region X,62,0,0.193
+SCH0493,Misamis Occidental Elementary School 493,Senior High,Misamis Occidental,Region X,41,0,0.193
+SCH0494,Misamis Occidental Integrated School 494,Elementary,Misamis Occidental,Region X,27,0,0.193
+SCH0495,Misamis Occidental Elementary School 495,Integrated,Misamis Occidental,Region X,62,0,0.193
+SCH0496,Misamis Oriental Integrated School 496,Elementary,Misamis Oriental,Region X,48,0,0.397
+SCH0497,Misamis Oriental Integrated School 497,Integrated,Misamis Oriental,Region X,24,0,0.397
+SCH0498,Misamis Oriental Elementary School 498,Elementary,Misamis Oriental,Region X,37,0,0.397
+SCH0499,Misamis Oriental Senior High School 499,Junior High,Misamis Oriental,Region X,26,0,0.397
+SCH0500,Misamis Oriental Elementary School 500,Junior High,Misamis Oriental,Region X,19,0,0.397
+SCH0501,Misamis Oriental Senior High School 501,Senior High,Misamis Oriental,Region X,53,0,0.397
+SCH0502,Misamis Oriental Integrated School 502,Senior High,Misamis Oriental,Region X,68,0,0.397
+SCH0503,Misamis Oriental Integrated School 503,Integrated,Misamis Oriental,Region X,19,0,0.397
+SCH0504,Misamis Oriental Elementary School 504,Elementary,Misamis Oriental,Region X,48,0,0.397
+SCH0505,Davao de Oro Junior High School 505,Integrated,Davao de Oro,Region XI,30,0,0.398
+SCH0506,Davao de Oro Integrated School 506,Junior High,Davao de Oro,Region XI,32,0,0.398
+SCH0507,Davao de Oro Integrated School 507,Senior High,Davao de Oro,Region XI,31,0,0.398
+SCH0508,Davao de Oro Integrated School 508,Integrated,Davao de Oro,Region XI,27,0,0.398
+SCH0509,Davao de Oro Integrated School 509,Elementary,Davao de Oro,Region XI,40,0,0.398
+SCH0510,Davao de Oro Senior High School 510,Integrated,Davao de Oro,Region XI,27,0,0.398
+SCH0511,Davao de Oro Senior High School 511,Senior High,Davao de Oro,Region XI,44,0,0.398
+SCH0512,Davao de Oro Senior High School 512,Junior High,Davao de Oro,Region XI,39,0,0.398
+SCH0513,Davao de Oro Integrated School 513,Elementary,Davao de Oro,Region XI,36,0,0.398
+SCH0514,Davao del Norte Elementary School 514,Elementary,Davao del Norte,Region XI,26,0,0.132
+SCH0515,Davao del Norte Integrated School 515,Elementary,Davao del Norte,Region XI,31,0,0.132
+SCH0516,Davao del Norte Senior High School 516,Junior High,Davao del Norte,Region XI,51,0,0.132
+SCH0517,Davao del Norte Elementary School 517,Senior High,Davao del Norte,Region XI,47,0,0.132
+SCH0518,Davao del Norte Elementary School 518,Integrated,Davao del Norte,Region XI,25,0,0.132
+SCH0519,Davao del Norte Senior High School 519,Integrated,Davao del Norte,Region XI,41,0,0.132
+SCH0520,Davao del Norte Elementary School 520,Senior High,Davao del Norte,Region XI,51,0,0.132
+SCH0521,Davao del Norte Senior High School 521,Senior High,Davao del Norte,Region XI,14,0,0.132
+SCH0522,Davao del Sur Junior High School 522,Junior High,Davao del Sur,Region XI,48,0,0.136
+SCH0523,Davao del Sur Integrated School 523,Junior High,Davao del Sur,Region XI,30,0,0.136
+SCH0524,Davao del Sur Elementary School 524,Senior High,Davao del Sur,Region XI,48,0,0.136
+SCH0525,Davao del Sur Senior High School 525,Elementary,Davao del Sur,Region XI,28,0,0.136
+SCH0526,Davao del Sur Senior High School 526,Junior High,Davao del Sur,Region XI,12,0,0.136
+SCH0527,Davao del Sur Integrated School 527,Elementary,Davao del Sur,Region XI,15,0,0.136
+SCH0528,Davao del Sur Senior High School 528,Elementary,Davao del Sur,Region XI,40,0,0.136
+SCH0529,Davao del Sur Junior High School 529,Senior High,Davao del Sur,Region XI,43,0,0.136
+SCH0530,Davao Occidental Senior High School 530,Senior High,Davao Occidental,Region XI,26,0,0.346
+SCH0531,Davao Occidental Senior High School 531,Elementary,Davao Occidental,Region XI,49,0,0.346
+SCH0532,Davao Occidental Junior High School 532,Junior High,Davao Occidental,Region XI,15,0,0.346
+SCH0533,Davao Occidental Integrated School 533,Elementary,Davao Occidental,Region XI,39,0,0.346
+SCH0534,Davao Occidental Junior High School 534,Elementary,Davao Occidental,Region XI,21,0,0.346
+SCH0535,Davao Occidental Elementary School 535,Junior High,Davao Occidental,Region XI,30,0,0.346
+SCH0536,Davao Occidental Integrated School 536,Integrated,Davao Occidental,Region XI,40,0,0.346
+SCH0537,Davao Occidental Integrated School 537,Senior High,Davao Occidental,Region XI,27,0,0.346
+SCH0538,Davao Occidental Junior High School 538,Senior High,Davao Occidental,Region XI,34,0,0.346
+SCH0539,Davao Oriental Senior High School 539,Elementary,Davao Oriental,Region XI,55,0,0.209
+SCH0540,Davao Oriental Elementary School 540,Junior High,Davao Oriental,Region XI,31,0,0.209
+SCH0541,Davao Oriental Junior High School 541,Elementary,Davao Oriental,Region XI,52,0,0.209
+SCH0542,Davao Oriental Elementary School 542,Senior High,Davao Oriental,Region XI,23,0,0.209
+SCH0543,Davao Oriental Integrated School 543,Integrated,Davao Oriental,Region XI,47,0,0.209
+SCH0544,Davao Oriental Integrated School 544,Integrated,Davao Oriental,Region XI,61,0,0.209
+SCH0545,Davao Oriental Integrated School 545,Senior High,Davao Oriental,Region XI,10,0,0.209
+SCH0546,Davao Oriental Junior High School 546,Elementary,Davao Oriental,Region XI,28,0,0.209
+SCH0547,Cotabato Elementary School 547,Senior High,Cotabato,Region XII,48,0,0.221
+SCH0548,Cotabato Integrated School 548,Senior High,Cotabato,Region XII,36,0,0.221
+SCH0549,Cotabato Elementary School 549,Junior High,Cotabato,Region XII,45,0,0.221
+SCH0550,Cotabato Integrated School 550,Elementary,Cotabato,Region XII,30,0,0.221
+SCH0551,Cotabato Elementary School 551,Junior High,Cotabato,Region XII,41,0,0.221
+SCH0552,Cotabato Senior High School 552,Junior High,Cotabato,Region XII,37,0,0.221
+SCH0553,Cotabato Junior High School 553,Senior High,Cotabato,Region XII,57,0,0.221
+SCH0554,Cotabato Senior High School 554,Senior High,Cotabato,Region XII,43,0,0.221
+SCH0555,Sarangani Integrated School 555,Integrated,Sarangani,Region XII,45,0,0.142
+SCH0556,Sarangani Junior High School 556,Junior High,Sarangani,Region XII,33,0,0.142
+SCH0557,Sarangani Integrated School 557,Junior High,Sarangani,Region XII,32,0,0.142
+SCH0558,Sarangani Senior High School 558,Elementary,Sarangani,Region XII,33,0,0.142
+SCH0559,Sarangani Integrated School 559,Elementary,Sarangani,Region XII,45,0,0.142
+SCH0560,Sarangani Integrated School 560,Elementary,Sarangani,Region XII,33,0,0.142
+SCH0561,Sarangani Integrated School 561,Elementary,Sarangani,Region XII,44,0,0.142
+SCH0562,Sarangani Senior High School 562,Integrated,Sarangani,Region XII,71,0,0.142
+SCH0563,South Cotabato Integrated School 563,Senior High,South Cotabato,Region XII,53,0,0.301
+SCH0564,South Cotabato Elementary School 564,Integrated,South Cotabato,Region XII,35,0,0.301
+SCH0565,South Cotabato Elementary School 565,Senior High,South Cotabato,Region XII,58,0,0.301
+SCH0566,South Cotabato Junior High School 566,Integrated,South Cotabato,Region XII,33,0,0.301
+SCH0567,South Cotabato Senior High School 567,Elementary,South Cotabato,Region XII,10,0,0.301
+SCH0568,South Cotabato Integrated School 568,Elementary,South Cotabato,Region XII,24,0,0.301
+SCH0569,South Cotabato Junior High School 569,Integrated,South Cotabato,Region XII,11,0,0.301
+SCH0570,South Cotabato Integrated School 570,Elementary,South Cotabato,Region XII,34,0,0.301
+SCH0571,South Cotabato Integrated School 571,Senior High,South Cotabato,Region XII,40,0,0.301
+SCH0572,Sultan Kudarat Junior High School 572,Senior High,Sultan Kudarat,Region XII,65,0,0.361
+SCH0573,Sultan Kudarat Junior High School 573,Elementary,Sultan Kudarat,Region XII,44,0,0.361
+SCH0574,Sultan Kudarat Elementary School 574,Junior High,Sultan Kudarat,Region XII,36,0,0.361
+SCH0575,Sultan Kudarat Senior High School 575,Senior High,Sultan Kudarat,Region XII,52,0,0.361
+SCH0576,Sultan Kudarat Junior High School 576,Junior High,Sultan Kudarat,Region XII,10,0,0.361
+SCH0577,Sultan Kudarat Elementary School 577,Junior High,Sultan Kudarat,Region XII,43,0,0.361
+SCH0578,Sultan Kudarat Senior High School 578,Junior High,Sultan Kudarat,Region XII,51,0,0.361
+SCH0579,Sultan Kudarat Junior High School 579,Junior High,Sultan Kudarat,Region XII,17,0,0.361
+SCH0580,Sultan Kudarat Elementary School 580,Junior High,Sultan Kudarat,Region XII,57,0,0.361
+SCH0581,Agusan del Norte Integrated School 581,Integrated,Agusan del Norte,Region XIII,45,0,0.433
+SCH0582,Agusan del Norte Integrated School 582,Senior High,Agusan del Norte,Region XIII,33,0,0.433
+SCH0583,Agusan del Norte Senior High School 583,Junior High,Agusan del Norte,Region XIII,49,0,0.433
+SCH0584,Agusan del Norte Integrated School 584,Elementary,Agusan del Norte,Region XIII,74,0,0.433
+SCH0585,Agusan del Norte Integrated School 585,Integrated,Agusan del Norte,Region XIII,42,0,0.433
+SCH0586,Agusan del Norte Senior High School 586,Senior High,Agusan del Norte,Region XIII,43,0,0.433
+SCH0587,Agusan del Norte Elementary School 587,Senior High,Agusan del Norte,Region XIII,33,0,0.433
+SCH0588,Agusan del Norte Elementary School 588,Senior High,Agusan del Norte,Region XIII,27,0,0.433
+SCH0589,Agusan del Norte Integrated School 589,Integrated,Agusan del Norte,Region XIII,52,0,0.433
+SCH0590,Agusan del Sur Senior High School 590,Senior High,Agusan del Sur,Region XIII,27,0,0.65
+SCH0591,Agusan del Sur Elementary School 591,Elementary,Agusan del Sur,Region XIII,41,0,0.65
+SCH0592,Agusan del Sur Integrated School 592,Integrated,Agusan del Sur,Region XIII,32,0,0.65
+SCH0593,Agusan del Sur Elementary School 593,Integrated,Agusan del Sur,Region XIII,47,0,0.65
+SCH0594,Agusan del Sur Junior High School 594,Senior High,Agusan del Sur,Region XIII,45,0,0.65
+SCH0595,Agusan del Sur Integrated School 595,Junior High,Agusan del Sur,Region XIII,55,0,0.65
+SCH0596,Agusan del Sur Elementary School 596,Integrated,Agusan del Sur,Region XIII,32,0,0.65
+SCH0597,Agusan del Sur Elementary School 597,Senior High,Agusan del Sur,Region XIII,35,0,0.65
+SCH0598,Agusan del Sur Elementary School 598,Junior High,Agusan del Sur,Region XIII,25,0,0.65
+SCH0599,Agusan del Sur Elementary School 599,Junior High,Agusan del Sur,Region XIII,33,0,0.65
+SCH0600,Dinagat Islands Integrated School 600,Junior High,Dinagat Islands,Region XIII,45,1,0.85
+SCH0601,Dinagat Islands Senior High School 601,Senior High,Dinagat Islands,Region XIII,51,1,0.85
+SCH0602,Dinagat Islands Senior High School 602,Integrated,Dinagat Islands,Region XIII,35,1,0.85
+SCH0603,Dinagat Islands Integrated School 603,Senior High,Dinagat Islands,Region XIII,53,1,0.85
+SCH0604,Dinagat Islands Elementary School 604,Senior High,Dinagat Islands,Region XIII,60,1,0.85
+SCH0605,Dinagat Islands Elementary School 605,Senior High,Dinagat Islands,Region XIII,46,1,0.85
+SCH0606,Dinagat Islands Elementary School 606,Integrated,Dinagat Islands,Region XIII,68,1,0.85
+SCH0607,Dinagat Islands Senior High School 607,Senior High,Dinagat Islands,Region XIII,35,1,0.85
+SCH0608,Dinagat Islands Junior High School 608,Senior High,Dinagat Islands,Region XIII,35,1,0.85
+SCH0609,Dinagat Islands Elementary School 609,Junior High,Dinagat Islands,Region XIII,35,1,0.85
+SCH0610,Dinagat Islands Senior High School 610,Senior High,Dinagat Islands,Region XIII,62,1,0.85
+SCH0611,Surigao del Norte Integrated School 611,Junior High,Surigao del Norte,Region XIII,49,0,0.439
+SCH0612,Surigao del Norte Elementary School 612,Senior High,Surigao del Norte,Region XIII,39,0,0.439
+SCH0613,Surigao del Norte Integrated School 613,Senior High,Surigao del Norte,Region XIII,44,0,0.439
+SCH0614,Surigao del Norte Junior High School 614,Elementary,Surigao del Norte,Region XIII,23,0,0.439
+SCH0615,Surigao del Norte Integrated School 615,Senior High,Surigao del Norte,Region XIII,76,0,0.439
+SCH0616,Surigao del Norte Elementary School 616,Senior High,Surigao del Norte,Region XIII,41,0,0.439
+SCH0617,Surigao del Norte Senior High School 617,Junior High,Surigao del Norte,Region XIII,41,0,0.439
+SCH0618,Surigao del Norte Junior High School 618,Senior High,Surigao del Norte,Region XIII,50,0,0.439
+SCH0619,Surigao del Norte Integrated School 619,Junior High,Surigao del Norte,Region XIII,47,0,0.439
+SCH0620,Surigao del Sur Junior High School 620,Junior High,Surigao del Sur,Region XIII,43,0,0.6
+SCH0621,Surigao del Sur Elementary School 621,Senior High,Surigao del Sur,Region XIII,28,0,0.6
+SCH0622,Surigao del Sur Elementary School 622,Elementary,Surigao del Sur,Region XIII,47,0,0.6
+SCH0623,Surigao del Sur Senior High School 623,Junior High,Surigao del Sur,Region XIII,68,0,0.6
+SCH0624,Surigao del Sur Integrated School 624,Junior High,Surigao del Sur,Region XIII,60,0,0.6
+SCH0625,Surigao del Sur Junior High School 625,Junior High,Surigao del Sur,Region XIII,63,0,0.6
+SCH0626,Surigao del Sur Junior High School 626,Integrated,Surigao del Sur,Region XIII,32,0,0.6
+SCH0627,Surigao del Sur Elementary School 627,Integrated,Surigao del Sur,Region XIII,25,0,0.6
+SCH0628,Surigao del Sur Senior High School 628,Junior High,Surigao del Sur,Region XIII,38,0,0.6
+SCH0629,Surigao del Sur Integrated School 629,Senior High,Surigao del Sur,Region XIII,40,0,0.6
+SCH0630,Manila Integrated School 630,Junior High,Manila,NCR,56,0,0.363
+SCH0631,Manila Junior High School 631,Senior High,Manila,NCR,14,0,0.363
+SCH0632,Manila Integrated School 632,Junior High,Manila,NCR,62,0,0.363
+SCH0633,Manila Senior High School 633,Integrated,Manila,NCR,37,0,0.363
+SCH0634,Manila Integrated School 634,Senior High,Manila,NCR,33,0,0.363
+SCH0635,Manila Integrated School 635,Integrated,Manila,NCR,24,0,0.363
+SCH0636,Manila Junior High School 636,Junior High,Manila,NCR,15,0,0.363
+SCH0637,Manila Junior High School 637,Senior High,Manila,NCR,52,0,0.363
+SCH0638,Manila Elementary School 638,Integrated,Manila,NCR,41,0,0.363
+SCH0639,Quezon City Elementary School 639,Elementary,Quezon City,NCR,20,0,0.406
+SCH0640,Quezon City Senior High School 640,Elementary,Quezon City,NCR,20,0,0.406
+SCH0641,Quezon City Junior High School 641,Senior High,Quezon City,NCR,34,0,0.406
+SCH0642,Quezon City Integrated School 642,Junior High,Quezon City,NCR,65,0,0.406
+SCH0643,Quezon City Integrated School 643,Elementary,Quezon City,NCR,36,0,0.406
+SCH0644,Quezon City Junior High School 644,Integrated,Quezon City,NCR,17,0,0.406
+SCH0645,Quezon City Senior High School 645,Elementary,Quezon City,NCR,36,0,0.406
+SCH0646,Quezon City Integrated School 646,Elementary,Quezon City,NCR,35,0,0.406
+SCH0647,Quezon City Integrated School 647,Senior High,Quezon City,NCR,10,0,0.406
+SCH0648,Caloocan Elementary School 648,Senior High,Caloocan,NCR,39,0,0.183
+SCH0649,Caloocan Junior High School 649,Elementary,Caloocan,NCR,36,0,0.183
+SCH0650,Caloocan Senior High School 650,Elementary,Caloocan,NCR,50,0,0.183
+SCH0651,Caloocan Senior High School 651,Junior High,Caloocan,NCR,67,0,0.183
+SCH0652,Caloocan Junior High School 652,Elementary,Caloocan,NCR,56,0,0.183
+SCH0653,Caloocan Senior High School 653,Integrated,Caloocan,NCR,35,0,0.183
+SCH0654,Caloocan Junior High School 654,Integrated,Caloocan,NCR,23,0,0.183
+SCH0655,Caloocan Integrated School 655,Elementary,Caloocan,NCR,78,0,0.183
+SCH0656,Pasig Elementary School 656,Senior High,Pasig,NCR,40,0,0.417
+SCH0657,Pasig Junior High School 657,Junior High,Pasig,NCR,40,0,0.417
+SCH0658,Pasig Integrated School 658,Elementary,Pasig,NCR,39,0,0.417
+SCH0659,Pasig Senior High School 659,Junior High,Pasig,NCR,42,0,0.417
+SCH0660,Pasig Senior High School 660,Elementary,Pasig,NCR,37,0,0.417
+SCH0661,Pasig Elementary School 661,Junior High,Pasig,NCR,31,0,0.417
+SCH0662,Pasig Integrated School 662,Integrated,Pasig,NCR,31,0,0.417
+SCH0663,Pasig Elementary School 663,Elementary,Pasig,NCR,39,0,0.417
+SCH0664,Pasig Integrated School 664,Elementary,Pasig,NCR,31,0,0.417
+SCH0665,Taguig Junior High School 665,Junior High,Taguig,NCR,29,0,0.321
+SCH0666,Taguig Senior High School 666,Integrated,Taguig,NCR,41,0,0.321
+SCH0667,Taguig Elementary School 667,Senior High,Taguig,NCR,36,0,0.321
+SCH0668,Taguig Junior High School 668,Integrated,Taguig,NCR,62,0,0.321
+SCH0669,Taguig Junior High School 669,Elementary,Taguig,NCR,10,0,0.321
+SCH0670,Taguig Senior High School 670,Elementary,Taguig,NCR,56,0,0.321
+SCH0671,Taguig Elementary School 671,Integrated,Taguig,NCR,58,0,0.321
+SCH0672,Taguig Integrated School 672,Elementary,Taguig,NCR,10,0,0.321
+SCH0673,Taguig Integrated School 673,Senior High,Taguig,NCR,34,0,0.321
+SCH0674,Abra Elementary School 674,Senior High,Abra,CAR,34,0,0.189
+SCH0675,Abra Elementary School 675,Senior High,Abra,CAR,18,0,0.189
+SCH0676,Abra Junior High School 676,Elementary,Abra,CAR,28,0,0.189
+SCH0677,Abra Senior High School 677,Junior High,Abra,CAR,23,0,0.189
+SCH0678,Abra Elementary School 678,Senior High,Abra,CAR,66,0,0.189
+SCH0679,Abra Senior High School 679,Junior High,Abra,CAR,54,0,0.189
+SCH0680,Abra Integrated School 680,Integrated,Abra,CAR,59,0,0.189
+SCH0681,Abra Junior High School 681,Junior High,Abra,CAR,50,0,0.189
+SCH0682,Apayao Integrated School 682,Elementary,Apayao,CAR,35,1,0.8
+SCH0683,Apayao Senior High School 683,Junior High,Apayao,CAR,35,1,0.8
+SCH0684,Apayao Elementary School 684,Junior High,Apayao,CAR,47,1,0.8
+SCH0685,Apayao Elementary School 685,Senior High,Apayao,CAR,35,1,0.8
+SCH0686,Apayao Senior High School 686,Integrated,Apayao,CAR,50,1,0.8
+SCH0687,Apayao Integrated School 687,Senior High,Apayao,CAR,36,1,0.8
+SCH0688,Apayao Elementary School 688,Junior High,Apayao,CAR,35,1,0.8
+SCH0689,Apayao Senior High School 689,Senior High,Apayao,CAR,50,1,0.8
+SCH0690,Apayao Elementary School 690,Senior High,Apayao,CAR,46,1,0.8
+SCH0691,Apayao Senior High School 691,Elementary,Apayao,CAR,35,1,0.8
+SCH0692,Apayao Senior High School 692,Integrated,Apayao,CAR,57,1,0.8
+SCH0693,Benguet Integrated School 693,Integrated,Benguet,CAR,23,0,0.411
+SCH0694,Benguet Senior High School 694,Junior High,Benguet,CAR,49,0,0.411
+SCH0695,Benguet Integrated School 695,Integrated,Benguet,CAR,48,0,0.411
+SCH0696,Benguet Senior High School 696,Senior High,Benguet,CAR,35,0,0.411
+SCH0697,Benguet Elementary School 697,Integrated,Benguet,CAR,44,0,0.411
+SCH0698,Benguet Elementary School 698,Integrated,Benguet,CAR,21,0,0.411
+SCH0699,Benguet Junior High School 699,Senior High,Benguet,CAR,53,0,0.411
+SCH0700,Benguet Senior High School 700,Elementary,Benguet,CAR,37,0,0.411
+SCH0701,Benguet Elementary School 701,Senior High,Benguet,CAR,32,0,0.411
+SCH0702,Ifugao Senior High School 702,Integrated,Ifugao,CAR,55,1,0.75
+SCH0703,Ifugao Integrated School 703,Junior High,Ifugao,CAR,35,1,0.75
+SCH0704,Ifugao Integrated School 704,Senior High,Ifugao,CAR,35,1,0.75
+SCH0705,Ifugao Integrated School 705,Elementary,Ifugao,CAR,35,1,0.75
+SCH0706,Ifugao Senior High School 706,Integrated,Ifugao,CAR,49,1,0.75
+SCH0707,Ifugao Senior High School 707,Elementary,Ifugao,CAR,35,1,0.75
+SCH0708,Ifugao Elementary School 708,Integrated,Ifugao,CAR,66,1,0.75
+SCH0709,Ifugao Senior High School 709,Junior High,Ifugao,CAR,35,1,0.75
+SCH0710,Ifugao Elementary School 710,Junior High,Ifugao,CAR,65,1,0.75
+SCH0711,Ifugao Integrated School 711,Elementary,Ifugao,CAR,43,1,0.75
+SCH0712,Ifugao Junior High School 712,Elementary,Ifugao,CAR,38,1,0.75
+SCH0713,Kalinga Senior High School 713,Senior High,Kalinga,CAR,31,0,0.65
+SCH0714,Kalinga Integrated School 714,Elementary,Kalinga,CAR,45,0,0.65
+SCH0715,Kalinga Junior High School 715,Integrated,Kalinga,CAR,39,0,0.65
+SCH0716,Kalinga Senior High School 716,Senior High,Kalinga,CAR,56,0,0.65
+SCH0717,Kalinga Integrated School 717,Elementary,Kalinga,CAR,41,0,0.65
+SCH0718,Kalinga Junior High School 718,Senior High,Kalinga,CAR,42,0,0.65
+SCH0719,Kalinga Integrated School 719,Senior High,Kalinga,CAR,34,0,0.65
+SCH0720,Kalinga Senior High School 720,Junior High,Kalinga,CAR,39,0,0.65
+SCH0721,Kalinga Elementary School 721,Elementary,Kalinga,CAR,44,0,0.65
+SCH0722,Kalinga Junior High School 722,Integrated,Kalinga,CAR,14,0,0.65
+SCH0723,Mountain Province Elementary School 723,Senior High,Mountain Province,CAR,19,1,0.7
+SCH0724,Mountain Province Senior High School 724,Integrated,Mountain Province,CAR,51,1,0.7
+SCH0725,Mountain Province Junior High School 725,Senior High,Mountain Province,CAR,42,1,0.7
+SCH0726,Mountain Province Integrated School 726,Junior High,Mountain Province,CAR,37,1,0.7
+SCH0727,Mountain Province Elementary School 727,Junior High,Mountain Province,CAR,40,1,0.7
+SCH0728,Mountain Province Elementary School 728,Integrated,Mountain Province,CAR,45,1,0.7
+SCH0729,Mountain Province Junior High School 729,Integrated,Mountain Province,CAR,31,1,0.7
+SCH0730,Mountain Province Elementary School 730,Senior High,Mountain Province,CAR,28,1,0.7
+SCH0731,Mountain Province Senior High School 731,Elementary,Mountain Province,CAR,42,1,0.7
+SCH0732,Mountain Province Senior High School 732,Senior High,Mountain Province,CAR,25,1,0.7
+SCH0733,Basilan Junior High School 733,Senior High,Basilan,BARMM,46,1,0.9
+SCH0734,Basilan Junior High School 734,Elementary,Basilan,BARMM,35,1,0.9
+SCH0735,Basilan Junior High School 735,Junior High,Basilan,BARMM,55,1,0.9
+SCH0736,Basilan Junior High School 736,Integrated,Basilan,BARMM,47,1,0.9
+SCH0737,Basilan Elementary School 737,Senior High,Basilan,BARMM,43,1,0.9
+SCH0738,Basilan Senior High School 738,Integrated,Basilan,BARMM,54,1,0.9
+SCH0739,Basilan Junior High School 739,Elementary,Basilan,BARMM,64,1,0.9
+SCH0740,Basilan Elementary School 740,Senior High,Basilan,BARMM,55,1,0.9
+SCH0741,Basilan Integrated School 741,Integrated,Basilan,BARMM,35,1,0.9
+SCH0742,Basilan Integrated School 742,Integrated,Basilan,BARMM,35,1,0.9
+SCH0743,Basilan Elementary School 743,Junior High,Basilan,BARMM,35,1,0.9
+SCH0744,Lanao del Sur Elementary School 744,Integrated,Lanao del Sur,BARMM,40,1,0.85
+SCH0745,Lanao del Sur Integrated School 745,Senior High,Lanao del Sur,BARMM,47,1,0.85
+SCH0746,Lanao del Sur Junior High School 746,Junior High,Lanao del Sur,BARMM,35,1,0.85
+SCH0747,Lanao del Sur Junior High School 747,Integrated,Lanao del Sur,BARMM,42,1,0.85
+SCH0748,Lanao del Sur Elementary School 748,Elementary,Lanao del Sur,BARMM,35,1,0.85
+SCH0749,Lanao del Sur Junior High School 749,Senior High,Lanao del Sur,BARMM,35,1,0.85
+SCH0750,Lanao del Sur Junior High School 750,Junior High,Lanao del Sur,BARMM,35,1,0.85
+SCH0751,Lanao del Sur Senior High School 751,Junior High,Lanao del Sur,BARMM,35,1,0.85
+SCH0752,Lanao del Sur Senior High School 752,Senior High,Lanao del Sur,BARMM,35,1,0.85
+SCH0753,Lanao del Sur Elementary School 753,Senior High,Lanao del Sur,BARMM,35,1,0.85
+SCH0754,Lanao del Sur Junior High School 754,Senior High,Lanao del Sur,BARMM,55,1,0.85
+SCH0755,Maguindanao Senior High School 755,Elementary,Maguindanao,BARMM,35,1,0.85
+SCH0756,Maguindanao Junior High School 756,Junior High,Maguindanao,BARMM,79,1,0.85
+SCH0757,Maguindanao Junior High School 757,Senior High,Maguindanao,BARMM,47,1,0.85
+SCH0758,Maguindanao Elementary School 758,Elementary,Maguindanao,BARMM,42,1,0.85
+SCH0759,Maguindanao Elementary School 759,Elementary,Maguindanao,BARMM,35,1,0.85
+SCH0760,Maguindanao Senior High School 760,Junior High,Maguindanao,BARMM,50,1,0.85
+SCH0761,Maguindanao Integrated School 761,Elementary,Maguindanao,BARMM,35,1,0.85
+SCH0762,Maguindanao Integrated School 762,Senior High,Maguindanao,BARMM,41,1,0.85
+SCH0763,Maguindanao Senior High School 763,Integrated,Maguindanao,BARMM,78,1,0.85
+SCH0764,Maguindanao Junior High School 764,Integrated,Maguindanao,BARMM,38,1,0.85
+SCH0765,Maguindanao Senior High School 765,Integrated,Maguindanao,BARMM,57,1,0.85
+SCH0766,Sulu Elementary School 766,Junior High,Sulu,BARMM,35,1,0.95
+SCH0767,Sulu Integrated School 767,Integrated,Sulu,BARMM,39,1,0.95
+SCH0768,Sulu Integrated School 768,Integrated,Sulu,BARMM,66,1,0.95
+SCH0769,Sulu Junior High School 769,Senior High,Sulu,BARMM,35,1,0.95
+SCH0770,Sulu Junior High School 770,Senior High,Sulu,BARMM,67,1,0.95
+SCH0771,Sulu Senior High School 771,Senior High,Sulu,BARMM,50,1,0.95
+SCH0772,Sulu Integrated School 772,Junior High,Sulu,BARMM,35,1,0.95
+SCH0773,Sulu Senior High School 773,Elementary,Sulu,BARMM,49,1,0.95
+SCH0774,Sulu Senior High School 774,Junior High,Sulu,BARMM,54,1,0.95
+SCH0775,Sulu Integrated School 775,Elementary,Sulu,BARMM,49,1,0.95
+SCH0776,Sulu Senior High School 776,Integrated,Sulu,BARMM,35,1,0.95
+SCH0777,Tawi-Tawi Elementary School 777,Elementary,Tawi-Tawi,BARMM,35,1,0.95
+SCH0778,Tawi-Tawi Senior High School 778,Integrated,Tawi-Tawi,BARMM,36,1,0.95
+SCH0779,Tawi-Tawi Integrated School 779,Junior High,Tawi-Tawi,BARMM,38,1,0.95
+SCH0780,Tawi-Tawi Junior High School 780,Senior High,Tawi-Tawi,BARMM,49,1,0.95
+SCH0781,Tawi-Tawi Senior High School 781,Junior High,Tawi-Tawi,BARMM,42,1,0.95
+SCH0782,Tawi-Tawi Junior High School 782,Integrated,Tawi-Tawi,BARMM,35,1,0.95
+SCH0783,Tawi-Tawi Integrated School 783,Integrated,Tawi-Tawi,BARMM,45,1,0.95
+SCH0784,Tawi-Tawi Senior High School 784,Integrated,Tawi-Tawi,BARMM,49,1,0.95
+SCH0785,Tawi-Tawi Elementary School 785,Elementary,Tawi-Tawi,BARMM,48,1,0.95
+SCH0786,Tawi-Tawi Integrated School 786,Integrated,Tawi-Tawi,BARMM,56,1,0.95
+SCH0787,Tawi-Tawi Junior High School 787,Junior High,Tawi-Tawi,BARMM,52,1,0.95

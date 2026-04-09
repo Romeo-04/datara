@@ -1,0 +1,87 @@
+division,region,nat_science_mps,nat_math_mps,year
+Ilocos Norte,Region I,54,50,2023
+Ilocos Sur,Region I,44,46,2023
+La Union,Region I,45,38,2023
+Pangasinan,Region I,48,39,2023
+Batanes,Region II,33,40,2023
+Cagayan,Region II,45,39,2023
+Isabela,Region II,49,44,2023
+Nueva Vizcaya,Region II,48,44,2023
+Quirino,Region II,46,43,2023
+Aurora,Region III,44,47,2023
+Bataan,Region III,42,43,2023
+Bulacan,Region III,47,52,2023
+Nueva Ecija,Region III,53,49,2023
+Pampanga,Region III,54,53,2023
+Tarlac,Region III,50,40,2023
+Zambales,Region III,54,53,2023
+Batangas,Region IV-A,46,44,2023
+Cavite,Region IV-A,55,53,2023
+Laguna,Region IV-A,46,39,2023
+Quezon,Region IV-A,51,50,2023
+Rizal,Region IV-A,48,45,2023
+Marinduque,Region IV-B,38,44,2023
+Occidental Mindoro,Region IV-B,40,37,2023
+Oriental Mindoro,Region IV-B,40,32,2023
+Palawan,Region IV-B,34,38,2023
+Romblon,Region IV-B,40,46,2023
+Albay,Region V,44,47,2023
+Camarines Norte,Region V,55,61,2023
+Camarines Sur,Region V,44,37,2023
+Catanduanes,Region V,42,48,2023
+Masbate,Region V,35,41,2023
+Sorsogon,Region V,56,53,2023
+Aklan,Region VI,49,43,2023
+Antique,Region VI,48,49,2023
+Capiz,Region VI,50,46,2023
+Guimaras,Region VI,42,46,2023
+Iloilo,Region VI,50,47,2023
+Negros Occidental,Region VI,42,44,2023
+Bohol,Region VII,49,37,2023
+Cebu,Region VII,34,51,2023
+Negros Oriental,Region VII,50,49,2023
+Siquijor,Region VII,46,53,2023
+Biliran,Region VIII,47,37,2023
+Eastern Samar,Region VIII,43,37,2023
+Leyte,Region VIII,42,42,2023
+Northern Samar,Region VIII,30,39,2023
+Samar,Region VIII,38,36,2023
+Southern Leyte,Region VIII,52,38,2023
+Zamboanga del Norte,Region IX,45,42,2023
+Zamboanga del Sur,Region IX,45,46,2023
+Zamboanga Sibugay,Region IX,48,43,2023
+Bukidnon,Region X,45,57,2023
+Camiguin,Region X,49,38,2023
+Lanao del Norte,Region X,40,51,2023
+Misamis Occidental,Region X,41,45,2023
+Misamis Oriental,Region X,43,40,2023
+Davao de Oro,Region XI,49,45,2023
+Davao del Norte,Region XI,45,44,2023
+Davao del Sur,Region XI,46,46,2023
+Davao Occidental,Region XI,44,49,2023
+Davao Oriental,Region XI,48,51,2023
+Cotabato,Region XII,51,50,2023
+Sarangani,Region XII,53,39,2023
+South Cotabato,Region XII,47,57,2023
+Sultan Kudarat,Region XII,48,34,2023
+Agusan del Norte,Region XIII,46,46,2023
+Agusan del Sur,Region XIII,30,45,2023
+Dinagat Islands,Region XIII,30,35,2023
+Surigao del Norte,Region XIII,50,43,2023
+Surigao del Sur,Region XIII,34,35,2023
+Manila,NCR,52,45,2023
+Quezon City,NCR,44,41,2023
+Caloocan,NCR,53,53,2023
+Pasig,NCR,53,48,2023
+Taguig,NCR,53,43,2023
+Abra,CAR,48,45,2023
+Apayao,CAR,30,40,2023
+Benguet,CAR,40,49,2023
+Ifugao,CAR,40,39,2023
+Kalinga,CAR,41,35,2023
+Mountain Province,CAR,46,37,2023
+Basilan,BARMM,34,30,2023
+Lanao del Sur,BARMM,30,36,2023
+Maguindanao,BARMM,34,30,2023
+Sulu,BARMM,30,30,2023
+Tawi-Tawi,BARMM,37,30,2023

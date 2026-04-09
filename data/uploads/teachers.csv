@@ -1,0 +1,4 @@
+teacher_id,school_id,division,region,subject_taught,specialization,years_experience,training_count,employment_status
+TCH00001,SCH0001,Cebu,Region VII,Biology,Chemistry,5,1,Permanent
+TCH00002,SCH0001,Cebu,Region VII,Mathematics,Mathematics,10,3,Permanent
+TCH00003,SCH0002,Bohol,Region VII,Physics,Physics,2,0,Contractual
