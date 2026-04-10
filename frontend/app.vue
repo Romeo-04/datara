@@ -3,7 +3,7 @@
     <!-- Global Navigation -->
     <nav class="bg-[#1a4e8f] text-white px-6 py-3 flex items-center gap-4 shadow-md">
       <NuxtLink to="/" class="flex items-center">
-        <img src="/text_logo.png" alt="STARSight" class="h-9 w-auto" />
+        <img src="/text_logo.png" alt="STARSight" class="h-9 w-auto" style="filter:brightness(0) invert(1)" />
       </NuxtLink>
       <div class="ml-auto flex gap-6 text-sm">
         <NuxtLink to="/" class="hover:text-[#f5a623] transition-colors">

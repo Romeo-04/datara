@@ -146,12 +146,14 @@ onMounted(async () => {
     L.marker(center, {
       icon: L.divIcon({
         className: "",
-        html: `<div style="font-size:9px;font-weight:800;color:#1a4e8f;text-align:center;
-                            background:rgba(255,255,255,0.75);padding:1px 4px;border-radius:3px;
-                            white-space:nowrap;pointer-events:none;margin-top:14px">
+        html: `<div style="display:inline-block;font-size:9px;font-weight:800;color:#1a4e8f;
+                            background:rgba(255,255,255,0.88);padding:2px 6px;border-radius:4px;
+                            white-space:nowrap;pointer-events:none;
+                            transform:translate(-50%, 14px);box-shadow:0 1px 3px rgba(0,0,0,0.18)">
                  ${region.region}
                </div>`,
-        iconAnchor: [30, -2],
+        iconSize: [0, 0],
+        iconAnchor: [0, 0],
       }),
     }).addTo(map);
   });
