@@ -1,7 +1,7 @@
 /**
  * API composable — wraps $fetch calls to the FastAPI backend.
- * Nuxt's nitro proxy forwards /api/** → http://localhost:8000/api/**
- * so both SSR and client-side fetches use the same relative paths.
+ * Local development uses Nuxt's /api proxy. Deployed builds set
+ * NUXT_PUBLIC_API_BASE so SSR and client fetches target the Vercel API.
  */
 
 import type {
@@ -12,7 +12,11 @@ import type {
 } from "~/types";
 
 export const useApi = () => {
-  const BASE = "/api/v1";
+  const config = useRuntimeConfig();
+  const apiBase = String(config.public.apiBase || "").replace(/\/+$/, "");
+  const apiUrl = (path: string) =>
+    `${apiBase}${path.startsWith("/") ? path : `/${path}`}`;
+  const BASE = apiUrl("/api/v1");
 
   const stats = () => $fetch<StatsOverview>(`${BASE}/stats`);
 
@@ -45,5 +49,13 @@ export const useApi = () => {
       `${BASE}/regions/${encodeURIComponent(name)}/divisions`
     );
 
-  return { stats, topDivisions, divisions, division, regions, regionDivisions };
+  return {
+    apiUrl,
+    stats,
+    topDivisions,
+    divisions,
+    division,
+    regions,
+    regionDivisions,
+  };
 };

@@ -17,6 +17,8 @@ frontend/.cache/
 
 # Next.js leftover build artifacts (no longer used)
 frontend/.next/
+.vercel-backend-src/
+.vercel-frontend-src/
 
 # Data — keep structure but not generated files
 data/processed/
@@ -25,3 +27,5 @@ data/synthetic/*.csv
 # OS
 .DS_Store
 Thumbs.db
+
+.vercel

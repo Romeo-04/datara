@@ -1,0 +1,14 @@
+frontend/node_modules
+frontend/.nuxt
+frontend/.output
+frontend/.next
+frontend/.cache
+data/uploads
+data/processed
+data/synthetic/*.csv
+.claude
+.venv
+venv
+__pycache__
+*.pyc
+

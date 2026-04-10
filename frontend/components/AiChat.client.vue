@@ -19,6 +19,7 @@ function renderMarkdown(text: string): string {
 const open = ref(false);
 const input = ref("");
 const loading = ref(false);
+const { apiUrl } = useApi();
 const messages = ref<Message[]>([
   {
     role: "assistant",
@@ -40,7 +41,7 @@ async function send() {
   scrollToBottom();
 
   try {
-    const res = await $fetch<{ reply: string }>("/api/v1/chat", {
+    const res = await $fetch<{ reply: string }>(apiUrl("/api/v1/chat"), {
       method: "POST",
       body: { message: text },
     });

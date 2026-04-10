@@ -4,6 +4,7 @@ saves them to data/uploads/, re-runs the pipeline, and reloads the data store.
 """
 
 import io
+import os
 import shutil
 import sys
 from pathlib import Path
@@ -81,6 +82,16 @@ async def upload_datasets(
     Accept up to 4 CSV files, validate, run pipeline, reload API data store.
     Any file not uploaded falls back to existing synthetic/upload data.
     """
+    if os.getenv("VERCEL") == "1":
+        raise HTTPException(
+            status_code=501,
+            detail=(
+                "Dataset upload is disabled on the Vercel demo deployment. "
+                "Persistent uploads require Vercel Blob, Postgres, or another "
+                "shared storage backend."
+            ),
+        )
+
     UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
 
     upload_results = {}

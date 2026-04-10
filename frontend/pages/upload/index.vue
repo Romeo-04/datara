@@ -1,6 +1,8 @@
 <script setup lang="ts">
+const { apiUrl } = useApi();
+
 const { data: schema } = await useAsyncData("upload-schema", () =>
-  $fetch<{ files: any[] }>("/api/v1/upload/schema")
+  $fetch<{ files: any[] }>(apiUrl("/api/v1/upload/schema"))
 );
 
 interface FileSlot {
@@ -53,7 +55,7 @@ async function submitUpload() {
   try {
     const formData = new FormData();
     slots.value.forEach((s) => { if (s.file) formData.append(s.key, s.file); });
-    result.value = await $fetch<any>("/api/v1/upload", { method: "POST", body: formData });
+    result.value = await $fetch<any>(apiUrl("/api/v1/upload"), { method: "POST", body: formData });
     slots.value.forEach((s) => (s.file = null));
   } catch (e: any) {
     error.value = e?.data?.detail ?? e?.message ?? "Upload failed.";
