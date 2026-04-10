@@ -36,5 +36,8 @@
     <footer class="text-center text-xs text-gray-400 py-6 border-t mt-12">
       STARSight · START a Ton Challenge · DOST-SEI STAR Program
     </footer>
+
+    <!-- AI Chat Widget -->
+    <AiChat />
   </div>
 </template>

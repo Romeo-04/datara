@@ -6,7 +6,10 @@
       "Bash(git add:*)",
       "Bash(git rm:*)",
       "Bash(taskkill /F /IM node.exe)",
-      "Bash(curl -s http://localhost:3002/map)"
+      "Bash(curl -s http://localhost:3002/map)",
+      "Bash(pip install:*)",
+      "Bash(curl -s -X POST http://localhost:8000/api/v1/chat -H \"Content-Type: application/json\" -d \"{\\\\\"message\\\\\":\\\\\"test\\\\\"}\")",
+      "Bash(start cmd:*)"
     ]
   }
 }
