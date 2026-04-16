@@ -181,16 +181,121 @@ onMounted(async () => {
     }
   });
 
+  // Actual geographic coordinates for each division
+  const DIVISION_COORDS: Record<string, [number, number]> = {
+    // BARMM
+    "Basilan":              [6.6825, 122.0676],
+    "Lanao del Sur":        [7.8231, 124.4357],
+    "Maguindanao":          [6.9414, 124.4146],
+    "Sulu":                 [6.0474, 121.0038],
+    "Tawi-Tawi":            [5.1339, 119.9536],
+    // CAR
+    "Abra":                 [17.5980, 120.4553],
+    "Apayao":               [18.0124, 121.1454],
+    "Benguet":              [16.4023, 120.5960],
+    "Ifugao":               [16.8333, 121.1753],
+    "Kalinga":              [17.4720, 121.3592],
+    "Mountain Province":    [17.0490, 120.9866],
+    // NCR
+    "Caloocan":             [14.6515, 120.9670],
+    "Manila":               [14.5995, 120.9842],
+    "Pasig":                [14.5764, 121.0851],
+    "Quezon City":          [14.6760, 121.0437],
+    "Taguig":               [14.5176, 121.0509],
+    // Region I
+    "Ilocos Norte":         [18.1647, 120.7116],
+    "Ilocos Sur":           [17.5761, 120.3869],
+    "La Union":             [16.6152, 120.3190],
+    "Pangasinan":           [15.8949, 120.2863],
+    // Region II
+    "Batanes":              [20.4487, 121.9702],
+    "Cagayan":              [17.6132, 121.7270],
+    "Isabela":              [16.9754, 121.8107],
+    "Nueva Vizcaya":        [16.3301, 121.1710],
+    "Quirino":              [16.4907, 121.5402],
+    // Region III
+    "Aurora":               [15.9784, 121.6459],
+    "Bataan":               [14.6417, 120.4818],
+    "Bulacan":              [14.7942, 120.8799],
+    "Nueva Ecija":          [15.5783, 121.0690],
+    "Pampanga":             [15.0794, 120.6200],
+    "Tarlac":               [15.4755, 120.5960],
+    "Zambales":             [15.5082, 120.0697],
+    // Region IV-A
+    "Batangas":             [13.7565, 121.0583],
+    "Cavite":               [14.2456, 120.8787],
+    "Laguna":               [14.2691, 121.4113],
+    "Quezon":               [14.0313, 122.1101],
+    "Rizal":                [14.6037, 121.3084],
+    // Region IV-B
+    "Marinduque":           [13.4767, 121.9032],
+    "Occidental Mindoro":   [12.9577, 120.6200],
+    "Oriental Mindoro":     [13.0565, 121.4069],
+    "Palawan":              [9.8349,  118.7384],
+    "Romblon":              [12.5778, 122.2695],
+    // Region V
+    "Albay":                [13.1775, 123.5280],
+    "Camarines Norte":      [14.1390, 122.7632],
+    "Camarines Sur":        [13.6252, 123.1853],
+    "Catanduanes":          [13.7089, 124.2422],
+    "Masbate":              [12.3696, 123.6217],
+    "Sorsogon":             [12.9433, 123.9447],
+    // Region VI
+    "Aklan":                [11.8166, 122.0942],
+    "Antique":              [11.3650, 122.0965],
+    "Capiz":                [11.5525, 122.7411],
+    "Guimaras":             [10.5954, 122.6277],
+    "Iloilo":               [10.7202, 122.5621],
+    "Negros Occidental":    [10.6713, 123.0036],
+    // Region VII
+    "Bohol":                [9.8468,  124.1435],
+    "Cebu":                 [10.3157, 123.8854],
+    "Negros Oriental":      [9.6168,  123.0115],
+    "Siquijor":             [9.2045,  123.5226],
+    // Region VIII
+    "Biliran":              [11.5830, 124.4619],
+    "Eastern Samar":        [11.6508, 125.4082],
+    "Leyte":                [10.8731, 124.8811],
+    "Northern Samar":       [12.5271, 124.6460],
+    "Samar":                [11.7490, 125.0285],
+    "Southern Leyte":       [10.3346, 125.1719],
+    // Region IX
+    "Zamboanga Sibugay":    [7.5222,  122.8198],
+    "Zamboanga del Norte":  [8.1527,  123.2577],
+    "Zamboanga del Sur":    [7.8383,  123.2968],
+    // Region X
+    "Bukidnon":             [8.0515,  125.0987],
+    "Camiguin":             [9.1730,  124.7300],
+    "Lanao del Norte":      [8.0730,  124.2873],
+    "Misamis Occidental":   [8.3375,  123.7071],
+    "Misamis Oriental":     [8.5046,  124.6219],
+    // Region XI
+    "Davao Occidental":     [6.1040,  125.6133],
+    "Davao Oriental":       [7.3172,  126.5420],
+    "Davao de Oro":         [7.3172,  126.1731],
+    "Davao del Norte":      [7.5619,  125.8039],
+    "Davao del Sur":        [6.7659,  125.3284],
+    // Region XII
+    "Cotabato":             [7.2047,  124.2310],
+    "Sarangani":            [5.9234,  125.1929],
+    "South Cotabato":       [6.3373,  124.7741],
+    "Sultan Kudarat":       [6.5069,  124.4200],
+    // Region XIII
+    "Agusan del Norte":     [8.9461,  125.5320],
+    "Agusan del Sur":       [8.1629,  126.0141],
+    "Dinagat Islands":      [10.1284, 125.6012],
+    "Surigao del Norte":    [9.7851,  125.4957],
+    "Surigao del Sur":      [8.7513,  126.1367],
+  };
+
   // Division dots — visible only at zoom >= 8
   const divisionLayer = L.layerGroup();
 
   props.divisions.forEach((div) => {
-    const regionCenter = REGION_CENTERS[div.region];
-    if (!regionCenter) return;
+    const coords = DIVISION_COORDS[div.division];
+    if (!coords) return;
 
-    const hash = div.division.split("").reduce((a, c) => a + c.charCodeAt(0), 0);
-    const lat = regionCenter[0] + ((hash % 17) - 8) * 0.12;
-    const lng = regionCenter[1] + ((hash % 13) - 6) * 0.12;
+    const [lat, lng] = coords;
     const color = uaiToColor(div.uai_score);
 
     L.circleMarker([lat, lng], {
