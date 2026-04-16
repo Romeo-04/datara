@@ -8,6 +8,30 @@ const props = defineProps<{
 
 const mapEl = ref<HTMLElement | null>(null);
 
+// Backend region name → PSGC code (matches faeldon/philippines-json-maps 2023 lowres filenames)
+const REGION_PSGC: Record<string, string> = {
+  "NCR":          "1300000000",
+  "CAR":          "1400000000",
+  "Region I":     "100000000",
+  "Region II":    "200000000",
+  "Region III":   "300000000",
+  "Region IV-A":  "400000000",
+  "Region IV-B":  "1700000000",
+  "Region V":     "500000000",
+  "Region VI":    "600000000",
+  "Region VII":   "700000000",
+  "Region VIII":  "800000000",
+  "Region IX":    "900000000",
+  "Region X":     "1000000000",
+  "Region XI":    "1100000000",
+  "Region XII":   "1200000000",
+  "Region XIII":  "1600000000",
+  "BARMM":        "1900000000",
+};
+
+const GEOJSON_BASE = "https://raw.githubusercontent.com/faeldon/philippines-json-maps/master/2023/geojson/regions/lowres";
+
+// Label anchor points (center of each region for label placement)
 const REGION_CENTERS: Record<string, [number, number]> = {
   "NCR":         [14.5995, 120.9842],
   "CAR":         [17.3521, 121.1736],
@@ -28,31 +52,16 @@ const REGION_CENTERS: Record<string, [number, number]> = {
   "BARMM":       [6.9000,  124.2000],
 };
 
-// Real-world radii (meters) to approximate each region's land mass
-const REGION_RADII: Record<string, number> = {
-  "NCR":         22000,
-  "CAR":         95000,
-  "Region I":    85000,
-  "Region II":   110000,
-  "Region III":  90000,
-  "Region IV-A": 88000,
-  "Region IV-B": 150000,
-  "Region V":    105000,
-  "Region VI":   95000,
-  "Region VII":  80000,
-  "Region VIII": 115000,
-  "Region IX":   85000,
-  "Region X":    95000,
-  "Region XI":   85000,
-  "Region XII":  95000,
-  "Region XIII": 105000,
-  "BARMM":       130000,
-};
-
 function uaiToColor(uai: number): string {
   if (uai >= 0.65) return "#c0392b";
   if (uai >= 0.40) return "#e67e22";
   return "#27ae60";
+}
+
+function uaiBorderColor(uai: number): string {
+  if (uai >= 0.65) return "#922b21";
+  if (uai >= 0.40) return "#9a6412";
+  return "#1e8449";
 }
 
 function uaiToLabel(uai: number): string {
@@ -80,16 +89,31 @@ onMounted(async () => {
 
   setTimeout(() => map.invalidateSize(), 100);
 
-  // Region coverage circles — L.circle uses real-world meters so they scale with zoom
-  props.regions.forEach((region: any) => {
-    const center = REGION_CENTERS[region.region];
-    if (!center) return;
+  // Build a lookup map from region name → region data
+  const regionByName: Record<string, any> = {};
+  props.regions.forEach((r: any) => { regionByName[r.region] = r; });
 
-    const uai = region.avg_uai_score ?? 0.3;
-    const color = uaiToColor(uai);
-    const radius = REGION_RADII[region.region] ?? 90000;
+  // Fetch all region GeoJSON files in parallel
+  const regionEntries = Object.entries(REGION_PSGC);
+  const geoResults = await Promise.allSettled(
+    regionEntries.map(([, psgc]) =>
+      fetch(`${GEOJSON_BASE}/provdists-region-${psgc}.0.001.json`).then(r => r.json())
+    )
+  );
+
+  geoResults.forEach((result, i) => {
+    const [regionName] = regionEntries[i];
+    if (result.status !== "fulfilled") return;
+
+    const geoData = result.value;
+    const region = regionByName[regionName];
+    if (!region) return;
+
+    const uai = parseFloat(region.avg_uai_score ?? 0);
+    const color  = uaiToColor(uai);
+    const border = uaiBorderColor(uai);
     const critical = region.critical_divisions ?? 0;
-    const high = region.high_divisions ?? 0;
+    const high     = region.high_divisions ?? 0;
 
     const popupHtml = `
       <div style="min-width:210px;font-family:system-ui,sans-serif">
@@ -106,11 +130,11 @@ onMounted(async () => {
           <span style="color:#666">High Priority</span>
           <span style="font-weight:600;color:#e67e22">${high}</span>
           <span style="color:#666">Teachers</span>
-          <span style="font-weight:600">${region.total_teachers.toLocaleString()}</span>
+          <span style="font-weight:600">${Number(region.total_teachers).toLocaleString()}</span>
           <span style="color:#666">Mismatch Rate</span>
-          <span style="font-weight:600">${(region.avg_mismatch_rate * 100).toFixed(1)}%</span>
+          <span style="font-weight:600">${(parseFloat(region.avg_mismatch_rate) * 100).toFixed(1)}%</span>
           <span style="color:#666">NAT MPS</span>
-          <span style="font-weight:600">${region.avg_nat_combined_mps.toFixed(1)}%</span>
+          <span style="font-weight:600">${parseFloat(region.avg_nat_combined_mps).toFixed(1)}%</span>
         </div>
         <a href="/regions/${encodeURIComponent(region.region)}"
            style="display:block;margin-top:8px;text-align:center;color:#1a4e8f;font-size:12px;
@@ -119,43 +143,42 @@ onMounted(async () => {
         </a>
       </div>`;
 
-    // Large translucent fill — covers land mass
-    L.circle(center, {
-      radius,
-      fillColor: color,
-      color: color,
-      weight: 2,
-      opacity: 0.7,
-      fillOpacity: 0.22,
-      interactive: false,
+    const geoLayer = L.geoJSON(geoData, {
+      style: {
+        fillColor:   color,
+        color:       border,
+        weight:      1.2,
+        opacity:     0.9,
+        fillOpacity: 0.35,
+      },
+      onEachFeature: (_feature, layer) => {
+        layer.bindPopup(popupHtml, { maxWidth: 250 });
+        layer.on("mouseover", function (this: any) {
+          this.setStyle({ fillOpacity: 0.6, weight: 2 });
+        });
+        layer.on("mouseout", function (this: any) {
+          geoLayer.resetStyle(this);
+        });
+      },
     }).addTo(map);
-
-    // Solid center dot for click/label — always visible
-    L.circleMarker(center, {
-      radius: 10,
-      fillColor: color,
-      color: "#fff",
-      weight: 2.5,
-      opacity: 1,
-      fillOpacity: 1,
-    })
-      .bindPopup(popupHtml, { maxWidth: 250 })
-      .addTo(map);
 
     // Region label
-    L.marker(center, {
-      icon: L.divIcon({
-        className: "",
-        html: `<div style="display:inline-block;font-size:9px;font-weight:800;color:#1a4e8f;
-                            background:rgba(255,255,255,0.88);padding:2px 6px;border-radius:4px;
-                            white-space:nowrap;pointer-events:none;
-                            transform:translate(-50%, 14px);box-shadow:0 1px 3px rgba(0,0,0,0.18)">
-                 ${region.region}
-               </div>`,
-        iconSize: [0, 0],
-        iconAnchor: [0, 0],
-      }),
-    }).addTo(map);
+    const center = REGION_CENTERS[regionName];
+    if (center) {
+      L.marker(center, {
+        icon: L.divIcon({
+          className: "",
+          html: `<div style="display:inline-block;font-size:9px;font-weight:800;color:#1a4e8f;
+                              background:rgba(255,255,255,0.88);padding:2px 6px;border-radius:4px;
+                              white-space:nowrap;pointer-events:none;
+                              transform:translate(-50%,-50%);box-shadow:0 1px 3px rgba(0,0,0,0.18)">
+                   ${regionName}
+                 </div>`,
+          iconSize: [0, 0],
+          iconAnchor: [0, 0],
+        }),
+      }).addTo(map);
+    }
   });
 
   // Division dots — visible only at zoom >= 8
@@ -211,18 +234,18 @@ onMounted(async () => {
     <div class="absolute bottom-8 left-4 z-[1000] bg-white border border-gray-200 rounded-xl shadow-md p-3 text-xs space-y-1.5">
       <div class="font-semibold text-gray-700 mb-2">UAI Priority Level</div>
       <div class="flex items-center gap-2">
-        <span class="w-4 h-4 rounded-full bg-red-600 inline-block border-2 border-white shadow" />
+        <span class="w-4 h-4 rounded-sm bg-red-600 inline-block border border-red-800" />
         Critical Priority (≥ 0.65)
       </div>
       <div class="flex items-center gap-2">
-        <span class="w-4 h-4 rounded-full bg-orange-500 inline-block border-2 border-white shadow" />
+        <span class="w-4 h-4 rounded-sm bg-orange-500 inline-block border border-orange-700" />
         High Priority (0.40 – 0.65)
       </div>
       <div class="flex items-center gap-2">
-        <span class="w-4 h-4 rounded-full bg-green-500 inline-block border-2 border-white shadow" />
+        <span class="w-4 h-4 rounded-sm bg-green-500 inline-block border border-green-700" />
         Standard Priority (&lt; 0.40)
       </div>
-      <div class="pt-1 border-t text-gray-400">Shaded area = region coverage</div>
+      <div class="pt-1 border-t text-gray-400">Click a region to see details</div>
       <div class="text-gray-400">Zoom in (level 8+) for division dots</div>
     </div>
   </div>
