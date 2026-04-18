@@ -18,6 +18,9 @@
         <NuxtLink to="/regions" class="hover:text-[#f5a623] transition-colors">
           Regions
         </NuxtLink>
+        <NuxtLink to="/budget" class="hover:text-[#f5a623] transition-colors">
+          Budget
+        </NuxtLink>
         <NuxtLink
           to="/upload"
           class="bg-[#f5a623] text-[#1a4e8f] font-semibold px-3 py-0.5 rounded-lg hover:bg-yellow-400 transition-colors"

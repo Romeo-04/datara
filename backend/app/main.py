@@ -8,6 +8,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from backend.app.api.routes import router
 from backend.app.api.upload import router as upload_router
 from backend.app.api.chat import router as chat_router
+from backend.app.api.budget import router as budget_router
 from backend.app.core.data_store import load
 
 app = FastAPI(
@@ -27,6 +28,7 @@ app.add_middleware(
 app.include_router(router)
 app.include_router(upload_router)
 app.include_router(chat_router)
+app.include_router(budget_router)
 
 
 @app.on_event("startup")
